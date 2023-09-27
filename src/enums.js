@@ -1,3 +1,7 @@
+export const ParentSym = Symbol("parent");
+export const StructSym = Symbol("struct");
+export const OrigBuffer = Symbol("origbuffer");
+
 export const eIDPropertyType = {
   IDP_STRING: 0,
   IDP_INT   : 1,
@@ -62,6 +66,7 @@ export const eCustomDataType = {
   CD_PROP_FLOAT3    : 48,
   CD_PROP_FLOAT2    : 49,
   CD_PROP_BOOL      : 50,
+  CD_HAIRLENGTH     : 51, /* Unused. */
   CD_PROP_QUATERNION: 52,
 };
 
@@ -113,4 +118,5 @@ export const eCustomDataTypeSDNA = {
   [cd.CD_PROP_FLOAT2]     : "float:2",
   [cd.CD_PROP_BOOL]       : "byte",
   [cd.CD_PROP_QUATERNION] : "float:4",
+  [cd.CD_HAIRLENGTH]      : "float",
 };

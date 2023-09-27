@@ -21,6 +21,7 @@ function main(args) {
   let blend1 = readBlendFile(path1);
 
   if (config.print) {
+    blend1.compressFile();
     blend1.printTree();
   }
 }

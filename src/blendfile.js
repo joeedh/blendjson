@@ -1,14 +1,14 @@
 import {SDNAParser, SDNAType, SDNATypes} from './sdna.js';
 import {BinReader, Endian} from './binfile.js';
-import {eIDPropertyType} from './enums.js';
+import {eCustomDataType, eIDPropertyType, OrigBuffer} from './enums.js';
 import * as util from './util.js';
 import {readCustomDataLayer} from './customdata.js';
+import fs from 'fs';
+import zlib from 'zlib';
 
 export class BlendReadError extends Error {}
 
-export const ParentSym = Symbol("parent");
-export const StructSym = Symbol("struct");
-
+import {ParentSym, StructSym} from './enums.js';
 /* Print a warning on unknown pointers
  * (which are usually leftover runtime data).
  */
@@ -21,6 +21,14 @@ export class BHead {
     this.old = old;
     this.sdna = sdna;
     this.nr = nr;
+  }
+
+  iterBlocks() {
+    if (this.nr === 1) {
+      return [this.data];
+    } else {
+      return this.data;
+    }
   }
 }
 
@@ -43,14 +51,54 @@ export class BlendFile {
     console.log("Printing blendfile tree");
     let file = this.makeTree();
 
-    console.log(JSON.stringify(file, undefined, 1));
+    console.log("Writing out.json");
+    fs.writeFileSync("out.json", JSON.stringify(file, undefined, 1));
+  }
+
+  compressFile() {
+    let sdna_nr = this.sdna.structs["CustomDataLayer"].nr;
+
+    for (let bh of this.bheads) {
+      if (bh.sdna !== sdna_nr) {
+        continue;
+      }
+
+      for (let layer of bh.iterBlocks()) {
+        if (!layer.data || layer.data.length === 0) {
+          continue;
+        }
+
+        let buf = layer.data;
+        if (!(buf instanceof ArrayBuffer)) {
+          buf = buf[OrigBuffer];
+        }
+
+        let zbuf = zlib.deflateSync(buf, {level : 4});
+        console.log(zbuf.buffer.byteLength, buf.byteLength);
+
+        let s = '';
+        if (zbuf.byteLength < buf.byteLength) {
+          s = "c";
+          buf = zbuf;
+        } else {
+          s = 'u';
+        }
+
+        if (buf.byteLength > 512) {
+          buf = new Buffer.from(buf);
+          layer.data = "#comparray#" + buf.toString("base64");
+        }
+      }
+    }
   }
 
   makeTree() {
     console.log("Printing blendfile tree");
 
     const blocks = new Map();
-    const visit = new WeakSet();
+    const visit = new Map();
+
+    let visit_idgen = 1;
 
     for (let k in this.main) {
       let list = this.main[k];
@@ -72,9 +120,23 @@ export class BlendFile {
         case SDNATypes.FLOAT:
         case SDNATypes.DOUBLE:
           return val;
+        case SDNATypes.ARRAY:
+          if (type.subtype.type === SDNATypes.CHAR && typeof val === "string") {
+            return val;
+          }
+
+          let array = [];
+          for (let i = 0; i < type.params; i++) {
+            array.push(writeType(val[i], type.subtype, fname));
+          }
+          return array;
         case SDNATypes.STRUCT:
           return writeStruct(val, fname + `(${type.subtype.name})`);
         case SDNATypes.POINTER: {
+          if (typeof val === "string" && val.startsWith("#comparray#")) {
+            return val;
+          }
+
           if (!val) {
             return null;
           }
@@ -82,16 +144,115 @@ export class BlendFile {
           if (blocks.has(val)) {
             return blocks.get(val) + val.id.name;
           } else {
-            console.log(type, val, fname);
-            return writeType(val, type.subtype, fname);
+            if (val instanceof Array) {
+              let id = getOrAssignID(val);
+              if (id !== undefined) {
+                return `#ref#${id}`;
+              } else if (0) {
+              } else {
+                let type2 = type.subtype;
+
+                if (val.length > 0 && type2.type === SDNATypes.VOID) {
+                  if (fname.endsWith("(CustomDataLayer)->data")) {
+                    /* Deal with simple number arrays*/
+                    if (typeof val[0] === "number" || (typeof val[0] === "object" && typeof val[0][0] === "number")) {
+                      return util.list(val);
+                    }
+                  }
+
+                  if (typeof val[0] === "object" && val[0][StructSym]) {
+                    type2 = {
+                      type   : SDNATypes.STRUCT,
+                      subtype: val[0][StructSym],
+                    }
+                  }
+                }
+
+                return util.list(val).map(f => writeType(f, type2, fname));
+              }
+            } else {
+              return val ? writeType(val, type.subtype, fname) : null;
+            }
           }
         }
       }
     };
 
+    var writeIDProp = (obj, name) => {
+      let idp = Object.assign({}, obj);
+      delete idp[StructSym];
+      delete idp[ParentSym];
+      delete idp.next;
+      delete idp.prev;
+
+      for (let f of obj[StructSym]._fields) {
+        if (f.name.startsWith("_pad")) {
+          delete idp[f.name];
+        }
+      }
+
+      idp.data = undefined;
+      if (obj.ui_data) {
+        idp.ui_data = writeStruct(obj.ui_data, obj.ui_data[StructSym]);
+      }
+
+      switch (obj.type) {
+        case eIDPropertyType.IDP_INT:
+        case eIDPropertyType.IDP_FLOAT:
+        case eIDPropertyType.IDP_DOUBLE:
+        case eIDPropertyType.IDP_BOOLEAN:
+          idp.data = obj.data.val;
+          break;
+        case eIDPropertyType.IDP_ARRAY:
+        case eIDPropertyType.IDP_STRING:
+          idp.data = obj.data.pointer;
+          break;
+        case eIDPropertyType.IDP_IDPARRAY:
+          idp.data = [];
+          for (let idp2 of obj.data.pointer) {
+            idp.data.push(writeIDProp(idp2));
+          }
+          break;
+        case eIDPropertyType.IDP_GROUP:
+          idp.data = [];
+
+          for (let idp2 of obj.data.group) {
+            idp.data.push(writeIDProp(idp2));
+          }
+
+          if (idp.data.length > 0) {
+            console.log(idp);
+          }
+          break;
+      }
+
+      return idp;
+    };
+
+    var getOrAssignID = (data) => {
+      let id = visit.get(data);
+
+      if (id === undefined) {
+        visit.set(data, visit_idgen++);
+      }
+
+      return id;
+    };
+
     var writeStruct = (obj, fname) => {
       let st = obj[StructSym];
       let ret = {};
+
+      let id = getOrAssignID(obj);
+      if (id !== undefined) {
+        return `#ref#${id}`;
+      }
+
+      visit.set(obj, visit_idgen++);
+
+      if (st.name === "IDProperty") {
+        return writeIDProp(obj, fname);
+      }
 
       if (fname === undefined) {
         fname = st.name;
@@ -123,7 +284,6 @@ export class BlendFile {
       for (let obj of list) {
         let st = obj[StructSym];
 
-        console.log(st);
         list2.push(writeStruct(obj), st.name);
       }
     }
@@ -217,12 +377,18 @@ export class BlendReader {
       st = this.bfile.sdna.structlist[bh.sdna];
     }
 
-    let r = new BinReader(bh.data);
+    const origbuffer = bh.data;
+    const r = new BinReader(bh.data);
+
     r.endian = this.r.endian;
 
     bh.data = [];
+    bh.data[OrigBuffer] = origbuffer;
     for (let i = 0; i < bh.nr; i++) {
-      bh.data.push(this.readStruct(r, st));
+      let data = this.readStruct(r, st);
+      data[OrigBuffer] = origbuffer;
+
+      bh.data.push(data);
     }
 
     if (bh.data.length === 1) {
@@ -358,11 +524,7 @@ export class BlendReader {
     const visit = new WeakSet();
     let deferred_links = [];
 
-    let linkStruct = (st, obj, fpath = st.name, is_dblock) => {
-      if (st.name === "wmWindow") {
-        console.log(obj);
-      }
-
+    var linkStruct = (st, obj, fpath = st.name, is_dblock) => {
       visit.add(obj);
 
       for (let f of st._fields) {
@@ -380,11 +542,8 @@ export class BlendReader {
                 console.log("Readdata", st.name + ":" + f.name);
                 obj2 = this.finishDataBlock(obj2, f.type.subtype, ptr);
               } else {
-                /* Manually handle idproperties. */
-                if (st.name === "CustomDataLayer") {
-                  obj2 = readCustomDataLayer(obj, this.bfile.sdna, this.readStruct);
-                } else if (st.name === "IDPropertyData") {
-                  /* ID properties are relinked later. */
+                if (st.name === "IDPropertyData" || st.name === "CustomDataLayer") {
+                  /* ID properties and customdata layers are dealt with later. */
                 } else {
                   /* Retry later. */
                   deferred_links.push({
@@ -392,6 +551,12 @@ export class BlendReader {
                   });
                 }
               }
+            }
+
+            if ((obj2 instanceof BigUint64Array || obj2 instanceof BigInt64Array) &&
+              f.type.subtype.type === SDNATypes.POINTER) {
+              obj2 = util.list(obj2);
+              obj2 = obj2.map(ptr => oldmap.get(ptr)).map(obj => obj === undefined ? null : obj);
             }
 
             if (obj2) {
@@ -405,23 +570,47 @@ export class BlendReader {
           }
         } else if (f.type.type === SDNATypes.STRUCT) {
           linkStruct(f.type.subtype, obj[f.name], fpath + "." + f.name);
+        } else if (f.type.type === SDNATypes.ARRAY) {
+          linkStaticArray(obj[f.name], f.type, fpath + "." + f.name);
+        }
+      }
+    };
+
+    var linkStaticArray = (obj, type, fpath = "") => {
+      if (type.subtype.type === SDNATypes.ARRAY) {
+        for (let i = 0; i < type.params; i++) {
+          linkStaticArray(obj[i], type.subtype, fpath + `[${i}]`);
+        }
+      } else if (type.subtype.type === SDNATypes.STRUCT) {
+        for (let i = 0; i < type.params; i++) {
+          linkStruct(type.subtype.subtype, obj[i], fpath + `[${i}]`, false);
+        }
+      } else if (type.subtype.type === SDNATypes.POINTER) {
+        for (let i = 0; i < type.params; i++) {
+          obj[i] = oldmap.get(obj[i]);
         }
       }
     };
 
     let idprop_sdna_nr = this.bfile.sdna.structs["IDProperty"].nr;
+    let cdata_sdna_nr = this.bfile.sdna.structs["Mesh"].nr;
+
+    for (let bh of this.bfile.bheads) {
+      if (bh.sdna === cdata_sdna_nr) {
+        //console.log("FOUND CDATA");
+        for (let data of bh.iterBlocks()) {
+          //console.log(oldmap.get(data.vdata.layers));
+        }
+      }
+    }
 
     for (let bh of bheads) {
       if (bh.data instanceof ArrayBuffer) {
         continue;
       }
 
-      if (bh.nr > 1) {
-        for (let i = 0; i < bh.nr; i++) {
-          linkStruct(bh.data[i][StructSym], bh.data[i]);
-        }
-      } else {
-        linkStruct(bh.data[StructSym], bh.data);
+      for (let data of bh.iterBlocks()) {
+        linkStruct(data[StructSym], data);
       }
     }
 
@@ -457,6 +646,22 @@ export class BlendReader {
         }
       }
     }
+
+    /* CustomData Layers. */
+    let cd_lay_sdna_nr = this.bfile.sdna.structs["CustomDataLayer"].nr;
+    //let cd_sdna_nr = this.bfile.sdna.structs["CustomData"].nr;
+
+    for (let bh of this.bfile.bheads) {
+      if (bh.id === "DATA" && bh.sdna === cd_lay_sdna_nr) {
+        for (let layer of bh.iterBlocks()) {
+          layer.name = readString(layer.name);
+          layer.data = readCustomDataLayer(layer, this.bfile.sdna, this.readStruct.bind(this));
+        }
+      }
+    }
+
+
+    /**** ID properties *****/
 
     let i32buf = new Int32Array(2);
     let f32buf = new Float32Array(i32buf.buffer);
@@ -538,6 +743,7 @@ export class BlendReader {
       }
     };
 
+
     for (let bh of this.bfile.bheads) {
       if (bh.id !== "DATA" || bh.sdna !== idprop_sdna_nr) {
         continue;
@@ -555,7 +761,6 @@ export class BlendReader {
     for (let dl of deferred_links) {
       console.log(dl.obj[StructSym].name); //oldmap.get(dl.ptr), dl.f.name, dl.fpath);
     }
-    process.exit();
   }
 
   /* Data is an arraybuffer. */
