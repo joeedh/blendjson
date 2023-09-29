@@ -8,6 +8,7 @@ import zlib from 'zlib';
 import pathmod from 'path';
 
 export class BlendReadError extends Error {}
+
 const IS_WINDOWS = process.platform.startsWith("win");
 
 export function JSONstringify(obj, param, indent) {
@@ -79,9 +80,9 @@ export class BlendFile {
     }
 
     let meta = {
-      version: this.version,
-      endian : this.endian,
-      sdna : this.sdna.toJSON(),
+      blendFileVersion: this.version,
+      endian          : this.endian,
+      sdna            : this.sdna.toJSON(),
     };
 
     fs.writeFileSync(`${path}/meta`, JSONstringify(meta, undefined, 1));
