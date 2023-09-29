@@ -5,10 +5,11 @@ import * as util from './util.js';
 import {readCustomDataLayer} from './customdata.js';
 import fs from 'fs';
 import zlib from 'zlib';
+import pathmod from 'path';
 
 export class BlendReadError extends Error {}
 
-import {ParentSym, StructSym} from './enums.js';
+import {ParentSym, StructSym, PointerSym} from './enums.js';
 /* Print a warning on unknown pointers
  * (which are usually leftover runtime data).
  */
@@ -38,6 +39,7 @@ let nonblocks = new Set([
 
 export class BlendFile {
   constructor(name) {
+    this.endian = Endian.LITTLE;
     this.name = name;
     this.bheads = [];
     this.oldmap = new Map();
@@ -45,6 +47,83 @@ export class BlendFile {
     this.sdna = undefined;
     this.main = {};
     this.version = 0;
+  }
+
+  writeBlendFolder(bname) {
+    console.log("Writing out/" + bname);
+
+    let blocks = this.beginWrite();
+    let path = `out/${bname}`;
+    let mkdir = (p) => fs.mkdirSync(p, {recursive: true});
+
+    mkdir(path);
+    /* Write render/glob data */
+    for (let bh of this.bheads) {
+      if (bh.id === "REND") {
+        fs.writeFileSync(`${path}/rend.bin`, Buffer.from(bh.data));
+      } else if (bh.id === "GLOB") {
+        let data = this.writeStruct(bh.data, blocks);
+        fs.writeFileSync(`${path}/glob`, JSON.stringify(data, undefined, 1));
+      }
+    }
+
+    let meta = {
+      version: this.version,
+      endian : this.endian
+    };
+
+    fs.writeFileSync(`${path}/meta`, JSON.stringify(meta, undefined, 1));
+
+    let okmap = [];
+
+    for (let i = "a".charCodeAt(0); i < "z".charCodeAt(0); i++) {
+      okmap.push(String.fromCharCode(i));
+    }
+    for (let i = "A".charCodeAt(0); i < "Z".charCodeAt(0); i++) {
+      okmap.push(String.fromCharCode(i));
+    }
+    okmap.push(".");
+    okmap.push("_");
+    okmap.push("~");
+    okmap.push("?");
+    okmap.push("<");
+    okmap.push(">");
+    okmap.push(" ");
+    for (let i = 0; i <= 9; i++) {
+      okmap.push(String.fromCharCode("0".charCodeAt(0) + i));
+    }
+    okmap = new Set(okmap);
+
+    let safename = (s) => {
+      let s2 = '';
+      for (let i = 0; i < s.length; i++) {
+        if (okmap.has(s[i])) {
+          s2 += s[i];
+          continue;
+        }
+
+        s2 += "x" + s.charCodeAt(i).toString(16);
+      }
+
+      return s2;
+    }
+
+    for (let k in this.main) {
+      let list = this.main[k];
+      for (let obj of list) {
+        let name = obj.id.name;
+        name = safename(name);
+
+        let buf = this.writeStruct(obj, blocks);
+        buf = JSON.stringify(buf, undefined, 1);
+
+        let outpath = `${path}/${k}/${name}`;
+        console.log(outpath);
+
+        mkdir(pathmod.dirname(outpath));
+        fs.writeFileSync(outpath, buf);
+      }
+    }
   }
 
   printTree() {
@@ -73,8 +152,8 @@ export class BlendFile {
           buf = buf[OrigBuffer];
         }
 
-        let zbuf = zlib.deflateSync(buf, {level : 4});
-        console.log(zbuf.buffer.byteLength, buf.byteLength);
+        let zbuf = zlib.deflateSync(buf, {level: 4});
+        //console.log(zbuf.buffer.byteLength, buf.byteLength);
 
         let s = '';
         if (zbuf.byteLength < buf.byteLength) {
@@ -92,26 +171,7 @@ export class BlendFile {
     }
   }
 
-  makeTree() {
-    console.log("Printing blendfile tree");
-
-    const blocks = new Map();
-    const visit = new Map();
-
-    let visit_idgen = 1;
-
-    for (let k in this.main) {
-      let list = this.main[k];
-      for (let obj of list) {
-        blocks.set(obj, k.toUpperCase());
-      }
-    }
-
-
-    let file = {
-      main: {}
-    };
-
+  writeStruct(obj, blocks, visit = new Map(), visit_idgen = 1) {
     var writeType = (val, type, fname) => {
       switch (type.type) {
         case SDNATypes.INT:
@@ -220,9 +280,6 @@ export class BlendFile {
             idp.data.push(writeIDProp(idp2));
           }
 
-          if (idp.data.length > 0) {
-            console.log(idp);
-          }
           break;
       }
 
@@ -277,19 +334,38 @@ export class BlendFile {
       return ret;
     };
 
-    let writeMainList = (k) => {
+    return writeStruct(obj);
+  }
+
+  beginWrite() {
+    let blocks = new Map();
+    for (let k in this.main) {
+      let list = this.main[k];
+      for (let obj of list) {
+        blocks.set(obj, k.toUpperCase());
+      }
+    }
+    return blocks;
+  }
+
+  makeTree() {
+    console.log("Printing blendfile tree");
+
+    let file = {
+      main: {}
+    };
+
+    let blocks = this.beginWrite();
+
+    for (let k in this.main) {
       let list = this.main[k];
       let list2 = file.main[k] = [];
 
       for (let obj of list) {
         let st = obj[StructSym];
 
-        list2.push(writeStruct(obj), st.name);
+        list2.push(this.writeStruct(obj, blocks), st.name);
       }
-    }
-
-    for (let k in this.main) {
-      writeMainList(k);
     }
 
     return file;
@@ -315,6 +391,8 @@ export class BlendReader {
     if (endian !== "v") {
       r.endian = Endian.BIG;
     }
+
+    this.bfile.endian = r.endian;
 
     console.log(header);
     console.log(endian);
@@ -433,6 +511,10 @@ export class BlendReader {
           break;
         }
         case SDNATypes.POINTER:
+          value = r.uint64()
+          //console.log(BigInt(Number(value)) - value);
+          //value = Number(value);
+          break;
         case SDNATypes.INT64_T:
           value = unsigned ? r.uint64() : r.int64();
           break;
@@ -460,9 +542,7 @@ export class BlendReader {
     }
 
     let readSDNA = (st) => {
-      let d = {
-        [StructSym]: st
-      };
+      let d = new (st.getClass())();
 
       for (let f of st._fields) {
         d[f.name] = readValue(f.type);
@@ -539,7 +619,6 @@ export class BlendReader {
             if (obj2 && obj2 instanceof ArrayBuffer) {
               if (f.type.subtype.type !== SDNATypes.VOID) {
                 /* Instantiate non-struct DATA block */
-                console.log("Readdata", st.name + ":" + f.name);
                 obj2 = this.finishDataBlock(obj2, f.type.subtype, ptr);
               } else {
                 if (st.name === "IDPropertyData" || st.name === "CustomDataLayer") {

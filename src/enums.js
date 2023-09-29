@@ -1,6 +1,7 @@
 export const ParentSym = Symbol("parent");
 export const StructSym = Symbol("struct");
 export const OrigBuffer = Symbol("origbuffer");
+export const PointerSym = Symbol("pointersym");
 
 export const eIDPropertyType = {
   IDP_STRING: 0,

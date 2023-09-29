@@ -18,3 +18,7 @@ export function readBlendFile(path) {
 
   return reader.bfile;
 }
+
+export function writeBlendFolder(path) {
+}
+

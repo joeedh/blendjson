@@ -2,6 +2,7 @@
 
 import {IDGen} from './util.js';
 import {Endian} from './binfile.js';
+import {StructSym, PointerSym} from './enums.js';
 
 export let ENDIAN_BIG = Endian.BIG;
 export let ENDIAN_LITTLE = Endian.LITTLE;
@@ -23,11 +24,11 @@ export let SDNATypes = {
   DOUBLE : 5,
   LONG   : 6,
   INT64_T: 7,
-  POINTER: 7,
-  STRUCT : 8,
-  ARRAY  : 9, //arrays are store nested, with first dimensions being leaf nodes
+  POINTER: 8,
+  STRUCT : 9,
+  ARRAY  : 10, //arrays are store nested, with first dimensions being leaf nodes
               //e.g. array[3][2] would be stored as type(array[2], type(array[3]));
-  VOID    : 10,
+  VOID    : 11,
   UNSIGNED: 64,
   TYPEMASK: 15
 };
@@ -58,7 +59,6 @@ export let BasicTypes = {
   "int64_t" : SDNATypes.INT64_T,
   "uint64_t": SDNATypes.INT64_T | SDNATypes.UNSIGNED,
   "void"    : SDNATypes.VOID,
-
 }
 
 function tab(size) {
@@ -419,6 +419,7 @@ function getTypeSize(type, offset) {
 
       return size;
     }
+    case SDNATypes.INT64_T:
     case SDNATypes.VOID:
       return 8; /* Should be a function pointer. */
     default:
@@ -427,7 +428,11 @@ function getTypeSize(type, offset) {
   }
 }
 
+let instIdGen = 0;
+
 export class SDNAStruct {
+  #class = null;
+
   constructor(name, typeid, fields, nr) {
     this.name = name;
     this.typeid = typeid;
@@ -435,6 +440,54 @@ export class SDNAStruct {
     this._fields = undefined;
     this.size = -1;
     this.nr = nr;
+
+    /* Instance id. */
+    this.instId = instIdGen++;
+  }
+
+  getClass() {
+    if (this.#class) {
+      return this.#class;
+    }
+
+    let props = '';
+
+    for (let f of this._fields) {
+      props += `      ${f.name} = `
+      switch (f.type.type) {
+        case SDNATypes.ARRAY:
+        case SDNATypes.POINTER:
+        case SDNATypes.STRUCT:
+          props += 'null';
+          break;
+        default:
+          props += '0';
+          break;
+      }
+
+      props += ";\n";
+    }
+
+    let code = `
+    this.#class = class ${this.name} {
+      static sdna = null;
+      
+      [PointerSym] = 0;
+      [StructSym] = null;
+      
+      ${props}
+      
+      constructor() {
+        this[StructSym] = this.constructor.sdna;
+      }
+    }
+    `
+
+    eval(code);
+
+    this.#class.sdna = this;
+
+    return this.#class;
   }
 
   calcSize(offset = 0) {
@@ -541,6 +594,7 @@ export class SDNAStruct {
   copy() {
     let ret = new SDNAStruct()
 
+    ret.#class = this.#class;
     ret.name = this.name;
     ret.typeid = this.typeid;
     ret.nr = this.nr;
