@@ -1,0 +1,98 @@
+{
+ "id": {
+  "next": null,
+  "prev": null,
+  "newid": null,
+  "lib": null,
+  "asset_data": null,
+  "name": "Light",
+  "flag": 0,
+  "tag": 0,
+  "us": 0,
+  "icon_id": 0,
+  "recalc": 0,
+  "recalc_up_to_undo_push": 0,
+  "recalc_after_undo_push": 0,
+  "session_uuid": 236,
+  "properties": null,
+  "override_library": null,
+  "orig_id": null,
+  "py_instance": null,
+  "library_weak_reference": null,
+  "runtime": {
+   "remap": {
+    "status": 0,
+    "skipped_refcounted": 0,
+    "skipped_direct": 0,
+    "skipped_indirect": 0
+   }
+  }
+ },
+ "adt": null,
+ "type": 0,
+ "flag": 0,
+ "mode": 1,
+ "r": 1,
+ "g": 1,
+ "b": 1,
+ "energy_new": 1000,
+ "radius": 0.10000000149011612,
+ "spotsize": 1.3089969158172607,
+ "spotblend": 0.15000000596046448,
+ "area_shape": 1,
+ "area_size": 0.10000000149011612,
+ "area_sizey": 0.10000000149011612,
+ "area_sizez": 1,
+ "area_spread": 3.1415927410125732,
+ "sun_angle": 0.19933730363845825,
+ "shdwr": 0,
+ "shdwg": 0,
+ "shdwb": 0,
+ "pr_texture": 0,
+ "use_nodes": 0,
+ "bias": 1,
+ "clipsta": 0.05000000074505806,
+ "clipend": 30.00200080871582,
+ "cascade_max_dist": 1000,
+ "cascade_exponent": 0.800000011920929,
+ "cascade_fade": 0.10000000149011612,
+ "cascade_count": 4,
+ "contact_dist": 0.20000000298023224,
+ "contact_bias": 0.029999999329447746,
+ "contact_thickness": 0.20000000298023224,
+ "diff_fac": 1,
+ "volume_fac": 1,
+ "spec_fac": 1,
+ "att_dist": 40,
+ "preview": {
+  "w": [
+   0,
+   0
+  ],
+  "h": [
+   0,
+   0
+  ],
+  "flag": [
+   0,
+   0
+  ],
+  "changed_timestamp": [
+   5,
+   5
+  ],
+  "rect": [
+   null,
+   null
+  ],
+  "gputexture": [
+   null,
+   null
+  ],
+  "icon_id": 0,
+  "tag": 0
+ },
+ "nodetree": null,
+ "ipo": null,
+ "energy": 1000
+}

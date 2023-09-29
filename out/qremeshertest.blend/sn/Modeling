@@ -1,0 +1,56 @@
+{
+ "id": {
+  "next": null,
+  "prev": null,
+  "newid": null,
+  "lib": null,
+  "asset_data": null,
+  "name": "Modeling",
+  "flag": 0,
+  "tag": 0,
+  "us": 0,
+  "icon_id": 0,
+  "recalc": 0,
+  "recalc_up_to_undo_push": 0,
+  "recalc_after_undo_push": 0,
+  "session_uuid": 142,
+  "properties": null,
+  "override_library": null,
+  "orig_id": null,
+  "py_instance": null,
+  "library_weak_reference": null,
+  "runtime": {
+   "remap": {
+    "status": 0,
+    "skipped_refcounted": 0,
+    "skipped_direct": 0,
+    "skipped_indirect": 0
+   }
+  }
+ },
+ "vertbase": {},
+ "edgebase": {},
+ "areabase": {},
+ "regionbase": {
+  "first": null,
+  "last": null
+ },
+ "scene": null,
+ "flag": 0,
+ "winid": 0,
+ "redraws_flag": 6,
+ "temp": 0,
+ "state": 0,
+ "do_draw": 0,
+ "do_refresh": 0,
+ "do_draw_gesture": 0,
+ "do_draw_paintcursor": 0,
+ "do_draw_drag": 0,
+ "skip_handling": 0,
+ "scrubbing": 0,
+ "active_region": null,
+ "animtimer": null,
+ "context": null,
+ "tool_tip": null,
+ "preview": null
+}

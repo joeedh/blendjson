@@ -1,0 +1,3310 @@
+{
+ "id": {
+  "next": null,
+  "prev": null,
+  "newid": null,
+  "lib": null,
+  "asset_data": null,
+  "name": "Vertex Average",
+  "flag": 512,
+  "tag": 0,
+  "us": 0,
+  "icon_id": 0,
+  "recalc": 0,
+  "recalc_up_to_undo_push": 0,
+  "recalc_after_undo_push": 0,
+  "session_uuid": 220,
+  "properties": null,
+  "override_library": null,
+  "orig_id": null,
+  "py_instance": null,
+  "library_weak_reference": null,
+  "runtime": {
+   "remap": {
+    "status": 0,
+    "skipped_refcounted": 0,
+    "skipped_direct": 0,
+    "skipped_indirect": 0
+   }
+  }
+ },
+ "clone": {
+  "image": null,
+  "offset": [
+   0,
+   0
+  ],
+  "alpha": 0.5
+ },
+ "curve": {
+  "flag": 1,
+  "cur": 0,
+  "preset": 2,
+  "changed_timestamp": 2,
+  "curr": {
+   "xmin": 0,
+   "xmax": 1,
+   "ymin": 0,
+   "ymax": 1
+  },
+  "clipr": {
+   "xmin": 0,
+   "xmax": 1,
+   "ymin": 0,
+   "ymax": 1
+  },
+  "cm": [
+   {
+    "totpoint": 4,
+    "flag": 0,
+    "range": 256,
+    "mintable": 0,
+    "maxtable": 1,
+    "ext_in": [
+     -0.9999980926513672,
+     -0.0019483319483697414
+    ],
+    "ext_out": [
+     -0.9999980926513672,
+     -0.0019483891082927585
+    ],
+    "curve": [
+     {
+      "x": 0,
+      "y": 1,
+      "flag": 0,
+      "shorty": 0
+     },
+     {
+      "x": 0.25,
+      "y": 0.9399999976158142,
+      "flag": 0,
+      "shorty": 0
+     },
+     {
+      "x": 0.75,
+      "y": 0.05999999865889549,
+      "flag": 0,
+      "shorty": 0
+     },
+     {
+      "x": 1,
+      "y": 0,
+      "flag": 0,
+      "shorty": 0
+     }
+    ],
+    "table": null,
+    "premultable": null,
+    "premul_ext_in": [
+     0,
+     0
+    ],
+    "premul_ext_out": [
+     0,
+     0
+    ],
+    "default_handle_type": 0
+   },
+   {
+    "totpoint": 0,
+    "flag": 0,
+    "range": 0,
+    "mintable": 0,
+    "maxtable": 0,
+    "ext_in": [
+     0,
+     0
+    ],
+    "ext_out": [
+     0,
+     0
+    ],
+    "curve": null,
+    "table": null,
+    "premultable": null,
+    "premul_ext_in": [
+     0,
+     0
+    ],
+    "premul_ext_out": [
+     0,
+     0
+    ],
+    "default_handle_type": 0
+   },
+   {
+    "totpoint": 0,
+    "flag": 0,
+    "range": 0,
+    "mintable": 0,
+    "maxtable": 0,
+    "ext_in": [
+     0,
+     0
+    ],
+    "ext_out": [
+     0,
+     0
+    ],
+    "curve": null,
+    "table": null,
+    "premultable": null,
+    "premul_ext_in": [
+     0,
+     0
+    ],
+    "premul_ext_out": [
+     0,
+     0
+    ],
+    "default_handle_type": 0
+   },
+   {
+    "totpoint": 0,
+    "flag": 0,
+    "range": 0,
+    "mintable": 0,
+    "maxtable": 0,
+    "ext_in": [
+     0,
+     0
+    ],
+    "ext_out": [
+     0,
+     0
+    ],
+    "curve": null,
+    "table": null,
+    "premultable": null,
+    "premul_ext_in": [
+     0,
+     0
+    ],
+    "premul_ext_out": [
+     0,
+     0
+    ],
+    "default_handle_type": 0
+   }
+  ],
+  "black": [
+   0,
+   0,
+   0
+  ],
+  "white": [
+   1,
+   1,
+   1
+  ],
+  "bwmul": [
+   1,
+   1,
+   1
+  ],
+  "sample": [
+   0,
+   0,
+   0
+  ],
+  "tone": 0
+ },
+ "mtex": {
+  "texco": 16,
+  "mapto": 1,
+  "blendtype": 0,
+  "object": null,
+  "tex": null,
+  "uvname": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "projx": 1,
+  "projy": 2,
+  "projz": 3,
+  "mapping": 0,
+  "brush_map_mode": 1,
+  "brush_angle_mode": 0,
+  "which_output": 0,
+  "ofs": [
+   0,
+   0,
+   0
+  ],
+  "size": [
+   1,
+   1,
+   1
+  ],
+  "rot": 0,
+  "random_angle": 6.2831854820251465,
+  "r": 1,
+  "g": 0,
+  "b": 1,
+  "k": 1,
+  "def_var": 1,
+  "colfac": 1,
+  "alphafac": 1,
+  "timefac": 1,
+  "lengthfac": 1,
+  "clumpfac": 1,
+  "dampfac": 1,
+  "kinkfac": 1,
+  "kinkampfac": 1,
+  "roughfac": 1,
+  "padensfac": 1,
+  "gravityfac": 1,
+  "lifefac": 1,
+  "sizefac": 1,
+  "ivelfac": 1,
+  "fieldfac": 1,
+  "twistfac": 1
+ },
+ "mask_mtex": {
+  "texco": 16,
+  "mapto": 1,
+  "blendtype": 0,
+  "object": null,
+  "tex": null,
+  "uvname": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "projx": 1,
+  "projy": 2,
+  "projz": 3,
+  "mapping": 0,
+  "brush_map_mode": 1,
+  "brush_angle_mode": 0,
+  "which_output": 0,
+  "ofs": [
+   0,
+   0,
+   0
+  ],
+  "size": [
+   1,
+   1,
+   1
+  ],
+  "rot": 0,
+  "random_angle": 6.2831854820251465,
+  "r": 1,
+  "g": 0,
+  "b": 1,
+  "k": 1,
+  "def_var": 1,
+  "colfac": 1,
+  "alphafac": 1,
+  "timefac": 1,
+  "lengthfac": 1,
+  "clumpfac": 1,
+  "dampfac": 1,
+  "kinkfac": 1,
+  "kinkampfac": 1,
+  "roughfac": 1,
+  "padensfac": 1,
+  "gravityfac": 1,
+  "lifefac": 1,
+  "sizefac": 1,
+  "ivelfac": 1,
+  "fieldfac": 1,
+  "twistfac": 1
+ },
+ "pressure_size_curve": null,
+ "pressure_strength_curve": null,
+ "toggle_brush": null,
+ "icon_imbuf": null,
+ "preview": null,
+ "gradient": null,
+ "paint_curve": null,
+ "icon_filepath": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0
+ ],
+ "normal_weight": 0,
+ "rake_factor": 0,
+ "blend": 0,
+ "ob_mode": 2048,
+ "weight": 1,
+ "size": 25,
+ "flag": 263172,
+ "flag2": 24576,
+ "sampling_flag": 1,
+ "mask_pressure": 0,
+ "jitter": 0,
+ "jitter_absolute": 0,
+ "overlay_flags": 0,
+ "spacing": 10,
+ "smooth_stroke_radius": 40,
+ "smooth_stroke_factor": 0.8999999761581421,
+ "rate": 0.10000000149011612,
+ "rgb": [
+  0.49799999594688416,
+  1,
+  0.49799999594688416
+ ],
+ "alpha": 1,
+ "hardness": 0,
+ "flow": 0,
+ "wet_mix": 0,
+ "wet_persistence": 0,
+ "density": 0,
+ "paint_flags": 0,
+ "tip_roundness": 0,
+ "tip_scale_x": 1,
+ "secondary_rgb": [
+  0,
+  0,
+  0
+ ],
+ "dash_ratio": 1,
+ "dash_samples": 20,
+ "sculpt_plane": 0,
+ "plane_offset": 0,
+ "gradient_spacing": 0,
+ "gradient_stroke_mode": 0,
+ "gradient_fill_mode": 0,
+ "falloff_shape": 0,
+ "falloff_angle": 0,
+ "sculpt_tool": 1,
+ "uv_sculpt_tool": 0,
+ "vertexpaint_tool": 0,
+ "weightpaint_tool": 0,
+ "imagepaint_tool": 0,
+ "mask_tool": 0,
+ "gpencil_tool": 0,
+ "gpencil_vertex_tool": 2,
+ "gpencil_sculpt_tool": 0,
+ "gpencil_weight_tool": 0,
+ "curves_sculpt_tool": 0,
+ "autosmooth_factor": 0,
+ "autosmooth_radius_factor": 1,
+ "autosmooth_projection": 0,
+ "autosmooth_spacing": 12,
+ "boundary_smooth_factor": 0,
+ "hard_corner_pin": 1,
+ "tilt_strength_factor": 0,
+ "topology_rake_factor": 0,
+ "topology_rake_radius_factor": 1,
+ "topology_rake_projection": 1,
+ "topology_rake_spacing": 12,
+ "crease_pinch_factor": 0.5,
+ "normal_radius_factor": 0.5,
+ "area_radius_factor": 0.5,
+ "wet_paint_radius_factor": 0.5,
+ "plane_trim": 0.5,
+ "height": 0,
+ "texture_sample_bias": 0,
+ "curve_preset": 1,
+ "disconnected_distance_max": 0.10000000149011612,
+ "deform_target": 0,
+ "automasking_flags": 0,
+ "automasking_boundary_edges_propagation_steps": 1,
+ "elastic_deform_type": 0,
+ "elastic_deform_volume_preservation": 0,
+ "snake_hook_deform_type": 0,
+ "pose_deform_type": 0,
+ "pose_offset": 0,
+ "pose_smooth_iterations": 4,
+ "pose_ik_segments": 1,
+ "pose_origin_type": 0,
+ "boundary_deform_type": 0,
+ "boundary_falloff_type": 0,
+ "boundary_offset": 0,
+ "cloth_deform_type": 0,
+ "cloth_force_falloff_type": 0,
+ "cloth_simulation_area_type": 0,
+ "cloth_mass": 1,
+ "cloth_damping": 0.009999999776482582,
+ "cloth_sim_limit": 2.5,
+ "cloth_sim_falloff": 0.75,
+ "cloth_constraint_softbody_strength": 0,
+ "array_deform_type": 0,
+ "array_count": 0,
+ "smooth_deform_type": 0,
+ "surface_smooth_shape_preservation": 0,
+ "surface_smooth_current_vertex": 0,
+ "surface_smooth_iterations": 0,
+ "multiplane_scrape_angle": 0,
+ "smear_deform_type": 0,
+ "smear_deform_blend": 0,
+ "slide_deform_type": 0,
+ "scene_project_direction_type": 0,
+ "texture_overlay_alpha": 33,
+ "mask_overlay_alpha": 33,
+ "cursor_overlay_alpha": 33,
+ "unprojected_radius": 0,
+ "sharp_threshold": 0,
+ "blur_kernel_radius": 2,
+ "blur_mode": 0,
+ "fill_threshold": 0.20000000298023224,
+ "add_col": [
+  1,
+  0.38999998569488525,
+  0.38999998569488525,
+  0.8999999761581421
+ ],
+ "sub_col": [
+  0.38999998569488525,
+  0.38999998569488525,
+  1,
+  0.8999999761581421
+ ],
+ "stencil_pos": [
+  256,
+  256
+ ],
+ "stencil_dimension": [
+  256,
+  256
+ ],
+ "mask_stencil_pos": [
+  0,
+  0
+ ],
+ "mask_stencil_dimension": [
+  0,
+  0
+ ],
+ "concave_mask_factor": 0,
+ "sharp_angle_limit": 0.3799999952316284,
+ "gpencil_settings": {
+  "draw_smoothfac": 0,
+  "fill_factor": 0,
+  "draw_strength": 0.800000011920929,
+  "draw_jitter": 0,
+  "draw_angle": 0,
+  "draw_angle_factor": 0,
+  "draw_random_press": 0,
+  "draw_random_strength": 0,
+  "draw_smoothlvl": 1,
+  "draw_subdivide": 0,
+  "fill_layer_mode": 0,
+  "fill_direction": 0,
+  "fill_threshold": 0,
+  "flag2": 0,
+  "fill_simplylvl": 0,
+  "fill_draw_mode": 0,
+  "fill_extend_mode": 0,
+  "icon_id": 16,
+  "input_samples": 0,
+  "uv_random": 0,
+  "brush_type": 0,
+  "eraser_mode": 0,
+  "active_smooth": 0,
+  "era_strength_f": 0,
+  "era_thickness_f": 0,
+  "flag": 7,
+  "gradient_f": 0,
+  "gradient_s": [
+   0,
+   0
+  ],
+  "simplify_f": 0,
+  "vertex_factor": 1,
+  "vertex_mode": 2,
+  "sculpt_flag": 0,
+  "sculpt_mode_flag": 0,
+  "preset_type": 102,
+  "brush_draw_mode": 0,
+  "random_hue": 0,
+  "random_saturation": 0,
+  "random_value": 0,
+  "fill_extend_fac": 0,
+  "dilate_pixels": 1,
+  "curve_sensitivity": {
+   "flag": 17,
+   "cur": 0,
+   "preset": 0,
+   "changed_timestamp": 0,
+   "curr": {
+    "xmin": 0,
+    "xmax": 1,
+    "ymin": 0,
+    "ymax": 1
+   },
+   "clipr": {
+    "xmin": 0,
+    "xmax": 1,
+    "ymin": 0,
+    "ymax": 1
+   },
+   "cm": [
+    {
+     "totpoint": 2,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": [
+      {
+       "x": 0,
+       "y": 0,
+       "flag": 0,
+       "shorty": 0
+      },
+      {
+       "x": 1,
+       "y": 1,
+       "flag": 0,
+       "shorty": 0
+      }
+     ],
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    },
+    {
+     "totpoint": 0,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": null,
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    },
+    {
+     "totpoint": 0,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": null,
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    },
+    {
+     "totpoint": 0,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": null,
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    }
+   ],
+   "black": [
+    0,
+    0,
+    0
+   ],
+   "white": [
+    1,
+    1,
+    1
+   ],
+   "bwmul": [
+    1,
+    1,
+    1
+   ],
+   "sample": [
+    0,
+    0,
+    0
+   ],
+   "tone": 0
+  },
+  "curve_strength": {
+   "flag": 17,
+   "cur": 0,
+   "preset": 0,
+   "changed_timestamp": 0,
+   "curr": {
+    "xmin": 0,
+    "xmax": 1,
+    "ymin": 0,
+    "ymax": 1
+   },
+   "clipr": {
+    "xmin": 0,
+    "xmax": 1,
+    "ymin": 0,
+    "ymax": 1
+   },
+   "cm": [
+    {
+     "totpoint": 2,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": [
+      {
+       "x": 0,
+       "y": 0,
+       "flag": 0,
+       "shorty": 0
+      },
+      {
+       "x": 1,
+       "y": 1,
+       "flag": 0,
+       "shorty": 0
+      }
+     ],
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    },
+    {
+     "totpoint": 0,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": null,
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    },
+    {
+     "totpoint": 0,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": null,
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    },
+    {
+     "totpoint": 0,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": null,
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    }
+   ],
+   "black": [
+    0,
+    0,
+    0
+   ],
+   "white": [
+    1,
+    1,
+    1
+   ],
+   "bwmul": [
+    1,
+    1,
+    1
+   ],
+   "sample": [
+    0,
+    0,
+    0
+   ],
+   "tone": 0
+  },
+  "curve_jitter": {
+   "flag": 17,
+   "cur": 0,
+   "preset": 0,
+   "changed_timestamp": 0,
+   "curr": {
+    "xmin": 0,
+    "xmax": 1,
+    "ymin": 0,
+    "ymax": 1
+   },
+   "clipr": {
+    "xmin": 0,
+    "xmax": 1,
+    "ymin": 0,
+    "ymax": 1
+   },
+   "cm": [
+    {
+     "totpoint": 2,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": [
+      {
+       "x": 0,
+       "y": 0,
+       "flag": 0,
+       "shorty": 0
+      },
+      {
+       "x": 1,
+       "y": 1,
+       "flag": 0,
+       "shorty": 0
+      }
+     ],
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    },
+    {
+     "totpoint": 0,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": null,
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    },
+    {
+     "totpoint": 0,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": null,
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    },
+    {
+     "totpoint": 0,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": null,
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    }
+   ],
+   "black": [
+    0,
+    0,
+    0
+   ],
+   "white": [
+    1,
+    1,
+    1
+   ],
+   "bwmul": [
+    1,
+    1,
+    1
+   ],
+   "sample": [
+    0,
+    0,
+    0
+   ],
+   "tone": 0
+  },
+  "curve_rand_pressure": {
+   "flag": 17,
+   "cur": 0,
+   "preset": 0,
+   "changed_timestamp": 0,
+   "curr": {
+    "xmin": 0,
+    "xmax": 1,
+    "ymin": 0,
+    "ymax": 1
+   },
+   "clipr": {
+    "xmin": 0,
+    "xmax": 1,
+    "ymin": 0,
+    "ymax": 1
+   },
+   "cm": [
+    {
+     "totpoint": 2,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": [
+      {
+       "x": 0,
+       "y": 0,
+       "flag": 0,
+       "shorty": 0
+      },
+      {
+       "x": 1,
+       "y": 1,
+       "flag": 0,
+       "shorty": 0
+      }
+     ],
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    },
+    {
+     "totpoint": 0,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": null,
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    },
+    {
+     "totpoint": 0,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": null,
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    },
+    {
+     "totpoint": 0,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": null,
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    }
+   ],
+   "black": [
+    0,
+    0,
+    0
+   ],
+   "white": [
+    1,
+    1,
+    1
+   ],
+   "bwmul": [
+    1,
+    1,
+    1
+   ],
+   "sample": [
+    0,
+    0,
+    0
+   ],
+   "tone": 0
+  },
+  "curve_rand_strength": {
+   "flag": 17,
+   "cur": 0,
+   "preset": 0,
+   "changed_timestamp": 0,
+   "curr": {
+    "xmin": 0,
+    "xmax": 1,
+    "ymin": 0,
+    "ymax": 1
+   },
+   "clipr": {
+    "xmin": 0,
+    "xmax": 1,
+    "ymin": 0,
+    "ymax": 1
+   },
+   "cm": [
+    {
+     "totpoint": 2,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": [
+      {
+       "x": 0,
+       "y": 0,
+       "flag": 0,
+       "shorty": 0
+      },
+      {
+       "x": 1,
+       "y": 1,
+       "flag": 0,
+       "shorty": 0
+      }
+     ],
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    },
+    {
+     "totpoint": 0,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": null,
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    },
+    {
+     "totpoint": 0,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": null,
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    },
+    {
+     "totpoint": 0,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": null,
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    }
+   ],
+   "black": [
+    0,
+    0,
+    0
+   ],
+   "white": [
+    1,
+    1,
+    1
+   ],
+   "bwmul": [
+    1,
+    1,
+    1
+   ],
+   "sample": [
+    0,
+    0,
+    0
+   ],
+   "tone": 0
+  },
+  "curve_rand_uv": {
+   "flag": 17,
+   "cur": 0,
+   "preset": 0,
+   "changed_timestamp": 0,
+   "curr": {
+    "xmin": 0,
+    "xmax": 1,
+    "ymin": 0,
+    "ymax": 1
+   },
+   "clipr": {
+    "xmin": 0,
+    "xmax": 1,
+    "ymin": 0,
+    "ymax": 1
+   },
+   "cm": [
+    {
+     "totpoint": 2,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": [
+      {
+       "x": 0,
+       "y": 0,
+       "flag": 0,
+       "shorty": 0
+      },
+      {
+       "x": 1,
+       "y": 1,
+       "flag": 0,
+       "shorty": 0
+      }
+     ],
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    },
+    {
+     "totpoint": 0,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": null,
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    },
+    {
+     "totpoint": 0,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": null,
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    },
+    {
+     "totpoint": 0,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": null,
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    }
+   ],
+   "black": [
+    0,
+    0,
+    0
+   ],
+   "white": [
+    1,
+    1,
+    1
+   ],
+   "bwmul": [
+    1,
+    1,
+    1
+   ],
+   "sample": [
+    0,
+    0,
+    0
+   ],
+   "tone": 0
+  },
+  "curve_rand_hue": {
+   "flag": 17,
+   "cur": 0,
+   "preset": 0,
+   "changed_timestamp": 0,
+   "curr": {
+    "xmin": 0,
+    "xmax": 1,
+    "ymin": 0,
+    "ymax": 1
+   },
+   "clipr": {
+    "xmin": 0,
+    "xmax": 1,
+    "ymin": 0,
+    "ymax": 1
+   },
+   "cm": [
+    {
+     "totpoint": 2,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": [
+      {
+       "x": 0,
+       "y": 0,
+       "flag": 0,
+       "shorty": 0
+      },
+      {
+       "x": 1,
+       "y": 1,
+       "flag": 0,
+       "shorty": 0
+      }
+     ],
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    },
+    {
+     "totpoint": 0,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": null,
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    },
+    {
+     "totpoint": 0,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": null,
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    },
+    {
+     "totpoint": 0,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": null,
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    }
+   ],
+   "black": [
+    0,
+    0,
+    0
+   ],
+   "white": [
+    1,
+    1,
+    1
+   ],
+   "bwmul": [
+    1,
+    1,
+    1
+   ],
+   "sample": [
+    0,
+    0,
+    0
+   ],
+   "tone": 0
+  },
+  "curve_rand_saturation": {
+   "flag": 17,
+   "cur": 0,
+   "preset": 0,
+   "changed_timestamp": 0,
+   "curr": {
+    "xmin": 0,
+    "xmax": 1,
+    "ymin": 0,
+    "ymax": 1
+   },
+   "clipr": {
+    "xmin": 0,
+    "xmax": 1,
+    "ymin": 0,
+    "ymax": 1
+   },
+   "cm": [
+    {
+     "totpoint": 2,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": [
+      {
+       "x": 0,
+       "y": 0,
+       "flag": 0,
+       "shorty": 0
+      },
+      {
+       "x": 1,
+       "y": 1,
+       "flag": 0,
+       "shorty": 0
+      }
+     ],
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    },
+    {
+     "totpoint": 0,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": null,
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    },
+    {
+     "totpoint": 0,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": null,
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    },
+    {
+     "totpoint": 0,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": null,
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    }
+   ],
+   "black": [
+    0,
+    0,
+    0
+   ],
+   "white": [
+    1,
+    1,
+    1
+   ],
+   "bwmul": [
+    1,
+    1,
+    1
+   ],
+   "sample": [
+    0,
+    0,
+    0
+   ],
+   "tone": 0
+  },
+  "curve_rand_value": {
+   "flag": 17,
+   "cur": 0,
+   "preset": 0,
+   "changed_timestamp": 0,
+   "curr": {
+    "xmin": 0,
+    "xmax": 1,
+    "ymin": 0,
+    "ymax": 1
+   },
+   "clipr": {
+    "xmin": 0,
+    "xmax": 1,
+    "ymin": 0,
+    "ymax": 1
+   },
+   "cm": [
+    {
+     "totpoint": 2,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": [
+      {
+       "x": 0,
+       "y": 0,
+       "flag": 0,
+       "shorty": 0
+      },
+      {
+       "x": 1,
+       "y": 1,
+       "flag": 0,
+       "shorty": 0
+      }
+     ],
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    },
+    {
+     "totpoint": 0,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": null,
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    },
+    {
+     "totpoint": 0,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": null,
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    },
+    {
+     "totpoint": 0,
+     "flag": 0,
+     "range": 0,
+     "mintable": 0,
+     "maxtable": 0,
+     "ext_in": [
+      0,
+      0
+     ],
+     "ext_out": [
+      0,
+      0
+     ],
+     "curve": null,
+     "table": null,
+     "premultable": null,
+     "premul_ext_in": [
+      0,
+      0
+     ],
+     "premul_ext_out": [
+      0,
+      0
+     ],
+     "default_handle_type": 0
+    }
+   ],
+   "black": [
+    0,
+    0,
+    0
+   ],
+   "white": [
+    1,
+    1,
+    1
+   ],
+   "bwmul": [
+    1,
+    1,
+    1
+   ],
+   "sample": [
+    0,
+    0,
+    0
+   ],
+   "tone": 0
+  },
+  "outline_fac": 0,
+  "material": null,
+  "material_alt": null
+ },
+ "dyntopo": {
+  "detail_percent": 25,
+  "detail_size": 8,
+  "constant_detail": 16,
+  "flag": 11,
+  "mode": 0,
+  "inherit": 1048575,
+  "spacing": 35,
+  "radius_scale": 1,
+  "repeat": 0,
+  "quality": 1
+ },
+ "curves_sculpt_settings": null,
+ "automasking_cavity_blur_steps": 0,
+ "automasking_cavity_factor": 1,
+ "automasking_cavity_curve": {
+  "flag": 1,
+  "cur": 0,
+  "preset": 0,
+  "changed_timestamp": 1,
+  "curr": {
+   "xmin": 0,
+   "xmax": 1,
+   "ymin": 0,
+   "ymax": 1
+  },
+  "clipr": {
+   "xmin": 0,
+   "xmax": 1,
+   "ymin": 0,
+   "ymax": 1
+  },
+  "cm": [
+   {
+    "totpoint": 2,
+    "flag": 0,
+    "range": 256,
+    "mintable": 0,
+    "maxtable": 1,
+    "ext_in": [
+     -0.7071067690849304,
+     -0.7071067690849304
+    ],
+    "ext_out": [
+     -0.7071068286895752,
+     -0.7071068286895752
+    ],
+    "curve": [
+     {
+      "x": 0,
+      "y": 0,
+      "flag": 0,
+      "shorty": 0
+     },
+     {
+      "x": 1,
+      "y": 1,
+      "flag": 0,
+      "shorty": 0
+     }
+    ],
+    "table": null,
+    "premultable": null,
+    "premul_ext_in": [
+     0,
+     0
+    ],
+    "premul_ext_out": [
+     0,
+     0
+    ],
+    "default_handle_type": 0
+   },
+   {
+    "totpoint": 0,
+    "flag": 0,
+    "range": 0,
+    "mintable": 0,
+    "maxtable": 0,
+    "ext_in": [
+     0,
+     0
+    ],
+    "ext_out": [
+     0,
+     0
+    ],
+    "curve": null,
+    "table": null,
+    "premultable": null,
+    "premul_ext_in": [
+     0,
+     0
+    ],
+    "premul_ext_out": [
+     0,
+     0
+    ],
+    "default_handle_type": 0
+   },
+   {
+    "totpoint": 0,
+    "flag": 0,
+    "range": 0,
+    "mintable": 0,
+    "maxtable": 0,
+    "ext_in": [
+     0,
+     0
+    ],
+    "ext_out": [
+     0,
+     0
+    ],
+    "curve": null,
+    "table": null,
+    "premultable": null,
+    "premul_ext_in": [
+     0,
+     0
+    ],
+    "premul_ext_out": [
+     0,
+     0
+    ],
+    "default_handle_type": 0
+   },
+   {
+    "totpoint": 0,
+    "flag": 0,
+    "range": 0,
+    "mintable": 0,
+    "maxtable": 0,
+    "ext_in": [
+     0,
+     0
+    ],
+    "ext_out": [
+     0,
+     0
+    ],
+    "curve": null,
+    "table": null,
+    "premultable": null,
+    "premul_ext_in": [
+     0,
+     0
+    ],
+    "premul_ext_out": [
+     0,
+     0
+    ],
+    "default_handle_type": 0
+   }
+  ],
+  "black": [
+   0,
+   0,
+   0
+  ],
+  "white": [
+   1,
+   1,
+   1
+  ],
+  "bwmul": [
+   1,
+   1,
+   1
+  ],
+  "sample": [
+   0,
+   0,
+   0
+  ],
+  "tone": 0
+ }
+}

@@ -1,0 +1,498 @@
+{
+ "id": {
+  "next": null,
+  "prev": null,
+  "newid": null,
+  "lib": null,
+  "asset_data": null,
+  "name": "Light",
+  "flag": 0,
+  "tag": 0,
+  "us": 0,
+  "icon_id": 0,
+  "recalc": 0,
+  "recalc_up_to_undo_push": 0,
+  "recalc_after_undo_push": 0,
+  "session_uuid": 234,
+  "properties": null,
+  "override_library": null,
+  "orig_id": null,
+  "py_instance": null,
+  "library_weak_reference": null,
+  "runtime": {
+   "remap": {
+    "status": 0,
+    "skipped_refcounted": 0,
+    "skipped_direct": 0,
+    "skipped_indirect": 0
+   }
+  }
+ },
+ "adt": null,
+ "drawdata": {
+  "first": null,
+  "last": null
+ },
+ "sculpt": null,
+ "type": 10,
+ "partype": 0,
+ "par1": 0,
+ "par2": 0,
+ "par3": 0,
+ "parsubstr": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0
+ ],
+ "parent": null,
+ "track": null,
+ "proxy": null,
+ "proxy_group": null,
+ "proxy_from": null,
+ "ipo": null,
+ "action": null,
+ "poselib": null,
+ "pose": null,
+ "data": "LALight",
+ "gpd": null,
+ "avs": {
+  "recalc": 0,
+  "path_type": 0,
+  "path_step": 1,
+  "path_range": 0,
+  "path_viewflag": 6,
+  "path_bakeflag": 0,
+  "path_sf": 1,
+  "path_ef": 250,
+  "path_bc": 10,
+  "path_ac": 10
+ },
+ "mpath": null,
+ "constraintChannels": {
+  "first": null,
+  "last": null
+ },
+ "effect": {
+  "first": null,
+  "last": null
+ },
+ "defbase": {
+  "first": null,
+  "last": null
+ },
+ "modifiers": {
+  "first": null,
+  "last": null
+ },
+ "greasepencil_modifiers": {
+  "first": null,
+  "last": null
+ },
+ "shader_fx": {
+  "first": null,
+  "last": null
+ },
+ "mode": 0,
+ "restore_mode": 0,
+ "mat": null,
+ "matbits": null,
+ "totcol": 0,
+ "actcol": 0,
+ "loc": [
+  4.076245307922363,
+  1.0054539442062378,
+  5.903861999511719
+ ],
+ "dloc": [
+  0,
+  0,
+  0
+ ],
+ "size": [
+  1,
+  1,
+  1
+ ],
+ "dsize": [
+  0,
+  0,
+  0
+ ],
+ "dscale": [
+  1,
+  1,
+  1
+ ],
+ "rot": [
+  0.6503279805183411,
+  0.055217113345861435,
+  1.8663908243179321
+ ],
+ "drot": [
+  0,
+  0,
+  0
+ ],
+ "quat": [
+  1,
+  0,
+  0,
+  0
+ ],
+ "dquat": [
+  1,
+  0,
+  0,
+  0
+ ],
+ "rotAxis": [
+  0,
+  1,
+  0
+ ],
+ "drotAxis": [
+  0,
+  1,
+  0
+ ],
+ "rotAngle": 0,
+ "drotAngle": 0,
+ "obmat": [
+  [
+   -0.29086464643478394,
+   0.9551711678504944,
+   -0.05518905818462372,
+   0
+  ],
+  [
+   -0.7711008191108704,
+   -0.1998833566904068,
+   0.6045247316360474,
+   0
+  ],
+  [
+   0.5663931965827942,
+   0.21839119493961334,
+   0.7946722507476807,
+   0
+  ],
+  [
+   4.076245307922363,
+   1.0054539442062378,
+   5.903861999511719,
+   1
+  ]
+ ],
+ "imat": [
+  [
+   -0.29086464643478394,
+   -0.7711008787155151,
+   0.5663931965827942,
+   0
+  ],
+  [
+   0.9551711082458496,
+   -0.1998833566904068,
+   0.21839120984077454,
+   0
+  ],
+  [
+   -0.05518905818462372,
+   0.6045247316360474,
+   0.7946723103523254,
+   0
+  ],
+  [
+   0.5510836243629456,
+   -0.2248610258102417,
+   -7.219975471496582,
+   1
+  ]
+ ],
+ "parentinv": [
+  [
+   1,
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   1,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   1,
+   0
+  ],
+  [
+   0,
+   0,
+   0,
+   1
+  ]
+ ],
+ "constinv": [
+  [
+   1,
+   1.4901162970204496e-8,
+   -2.9802322387695312e-8,
+   0
+  ],
+  [
+   1.4901162970204496e-8,
+   1.0000001192092896,
+   2.980232594040899e-8,
+   0
+  ],
+  [
+   0,
+   0,
+   1,
+   0
+  ],
+  [
+   1.7763570511584873e-15,
+   1.1920930376163597e-7,
+   3.5527141023169746e-15,
+   1
+  ]
+ ],
+ "lay": 1,
+ "flag": 2758,
+ "colbits": 0,
+ "transflag": 0,
+ "protectflag": 0,
+ "trackflag": 5,
+ "upflag": 1,
+ "nlaflag": 0,
+ "duplicator_visibility_flag": 3,
+ "base_flag": 726,
+ "base_local_view_bits": 0,
+ "col_group": 1,
+ "col_mask": 255,
+ "rotmode": 1,
+ "boundtype": 0,
+ "collision_boundtype": 0,
+ "dtx": 0,
+ "dt": 5,
+ "empty_drawtype": 1,
+ "empty_drawsize": 1,
+ "dupfacesca": 1,
+ "index": 0,
+ "actdef": 0,
+ "col": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "softflag": 0,
+ "restrictflag": 1032,
+ "shapenr": 0,
+ "shapeflag": 0,
+ "constraints": {
+  "first": null,
+  "last": null
+ },
+ "nlastrips": {
+  "first": null,
+  "last": null
+ },
+ "hooks": {
+  "first": null,
+  "last": null
+ },
+ "particlesystem": {
+  "first": null,
+  "last": null
+ },
+ "pd": {
+  "flag": 49152,
+  "deflect": 0,
+  "forcefield": 0,
+  "falloff": 0,
+  "shape": 0,
+  "tex_mode": 0,
+  "kink": 0,
+  "kink_axis": 0,
+  "zdir": 0,
+  "f_strength": 1,
+  "f_damp": 1,
+  "f_flow": 0,
+  "f_wind_factor": 1,
+  "f_size": 0,
+  "f_power": 0,
+  "maxdist": 0,
+  "mindist": 0,
+  "f_power_r": 0,
+  "maxrad": 0,
+  "minrad": 0,
+  "pdef_damp": 0,
+  "pdef_rdamp": 0,
+  "pdef_perm": 0,
+  "pdef_frict": 0,
+  "pdef_rfrict": 0,
+  "pdef_stickness": 0,
+  "absorption": 0,
+  "pdef_sbdamp": 0.10000000149011612,
+  "pdef_sbift": 0.20000000298023224,
+  "pdef_sboft": 0.019999999552965164,
+  "clump_fac": 0,
+  "clump_pow": 0,
+  "kink_freq": 0,
+  "kink_shape": 0,
+  "kink_amp": 0,
+  "free_end": 0,
+  "tex_nabla": 0,
+  "tex": null,
+  "rng": null,
+  "f_noise": 0,
+  "seed": 2,
+  "drawvec1": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "drawvec2": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "drawvec_falloff_min": [
+   0,
+   0,
+   0
+  ],
+  "drawvec_falloff_max": [
+   0,
+   0,
+   0
+  ],
+  "f_source": null,
+  "pdef_cfrict": 5
+ },
+ "soft": null,
+ "dup_group": null,
+ "fluidsimSettings": null,
+ "pc_ids": {
+  "first": null,
+  "last": null
+ },
+ "rigidbody_object": null,
+ "rigidbody_constraint": null,
+ "ima_ofs": [
+  0,
+  0
+ ],
+ "iuser": null,
+ "empty_image_visibility_flag": 0,
+ "empty_image_depth": 0,
+ "empty_image_flag": 0,
+ "modifier_flag": 0,
+ "preview": null,
+ "lineart": {
+  "usage": 0,
+  "flags": 0,
+  "crease_threshold": 0,
+  "intersection_priority": 0
+ },
+ "lightgroup": null,
+ "light_linking": null,
+ "lightprobe_cache": null,
+ "runtime": {
+  "last_data_mask": {},
+  "last_need_mapping": 0,
+  "parent_display_origin": [
+   0,
+   0,
+   0
+  ],
+  "select_id": 0,
+  "is_data_eval_owned": 0,
+  "overlay_mode_transfer_start_time": 0,
+  "bb": null,
+  "data_orig": null,
+  "data_eval": null,
+  "geometry_set_eval": null,
+  "mesh_deform_eval": null,
+  "editmesh_eval_cage": null,
+  "editmesh_bb_cage": null,
+  "gpd_orig": null,
+  "gpd_eval": null,
+  "object_as_temp_mesh": null,
+  "pose_backup": null,
+  "object_as_temp_curve": null,
+  "curve_cache": null,
+  "local_collections_bits": 0,
+  "crazyspace_deform_imats": null,
+  "crazyspace_deform_cos": null,
+  "crazyspace_num_verts": 0
+ }
+}

@@ -1,0 +1,1112 @@
+{
+ "id": {
+  "next": null,
+  "prev": null,
+  "newid": null,
+  "lib": null,
+  "asset_data": null,
+  "name": "Layout",
+  "flag": 0,
+  "tag": 0,
+  "us": 0,
+  "icon_id": 0,
+  "recalc": 0,
+  "recalc_up_to_undo_push": 0,
+  "recalc_after_undo_push": 0,
+  "session_uuid": 141,
+  "properties": null,
+  "override_library": null,
+  "orig_id": null,
+  "py_instance": null,
+  "library_weak_reference": null,
+  "runtime": {
+   "remap": {
+    "status": 0,
+    "skipped_refcounted": 0,
+    "skipped_direct": 0,
+    "skipped_indirect": 0
+   }
+  }
+ },
+ "vertbase": {},
+ "edgebase": {},
+ "areabase": {},
+ "regionbase": {
+  "first": null,
+  "last": null
+ },
+ "scene": null,
+ "flag": 0,
+ "winid": 1,
+ "redraws_flag": 6,
+ "temp": 0,
+ "state": 0,
+ "do_draw": 0,
+ "do_refresh": 0,
+ "do_draw_gesture": 0,
+ "do_draw_paintcursor": 0,
+ "do_draw_drag": 0,
+ "skip_handling": 0,
+ "scrubbing": 0,
+ "active_region": {
+  "next": null,
+  "prev": {
+   "next": "#ref#18",
+   "prev": {
+    "next": "#ref#20",
+    "prev": {
+     "next": "#ref#22",
+     "prev": {
+      "next": "#ref#24",
+      "prev": {
+       "next": "#ref#26",
+       "prev": {
+        "next": "#ref#28",
+        "prev": {
+         "next": "#ref#30",
+         "prev": null,
+         "v2d": {
+          "tot": {
+           "xmin": 0,
+           "xmax": 1147,
+           "ymin": 0,
+           "ymax": 35
+          },
+          "cur": {
+           "xmin": 0,
+           "xmax": 1586,
+           "ymin": 0,
+           "ymax": 35
+          },
+          "vert": {
+           "xmin": 0,
+           "xmax": 0,
+           "ymin": 0,
+           "ymax": 0
+          },
+          "hor": {
+           "xmin": 0,
+           "xmax": 0,
+           "ymin": 0,
+           "ymax": 0
+          },
+          "mask": {
+           "xmin": 0,
+           "xmax": 1585,
+           "ymin": 0,
+           "ymax": 34
+          },
+          "min": [
+           1171,
+           25
+          ],
+          "max": [
+           1171,
+           25
+          ],
+          "minzoom": 1,
+          "maxzoom": 1,
+          "scroll": 0,
+          "scroll_ui": 0,
+          "keeptot": 2,
+          "keepzoom": 771,
+          "keepofs": 4,
+          "flag": 1036,
+          "align": 10,
+          "winx": 1586,
+          "winy": 35,
+          "oldwinx": 1586,
+          "oldwiny": 35,
+          "around": 0,
+          "alpha_vert": -1,
+          "alpha_hor": -1,
+          "page_size_y": 0,
+          "sms": null,
+          "smooth_timer": null
+         },
+         "winrct": {
+          "xmin": 0,
+          "xmax": 1585,
+          "ymin": 980,
+          "ymax": 1014
+         },
+         "drawrct": {
+          "xmin": 0,
+          "xmax": 0,
+          "ymin": 0,
+          "ymax": 0
+         },
+         "winx": 1586,
+         "winy": 35,
+         "category_scroll": 0,
+         "visible": 1,
+         "regiontype": 1,
+         "alignment": 1,
+         "flag": 0,
+         "sizex": 1153,
+         "sizey": 25,
+         "do_draw": 0,
+         "do_draw_paintcursor": 0,
+         "overlap": 1,
+         "flagfullscreen": 0,
+         "type": null,
+         "uiblocks": {
+          "first": null,
+          "last": null
+         },
+         "panels": {
+          "first": null,
+          "last": null
+         },
+         "panels_category_active": {
+          "first": null,
+          "last": null
+         },
+         "ui_lists": {
+          "first": null,
+          "last": null
+         },
+         "ui_previews": {
+          "first": null,
+          "last": null
+         },
+         "handlers": {
+          "first": null,
+          "last": null
+         },
+         "panels_category": {
+          "first": null,
+          "last": null
+         },
+         "gizmo_map": null,
+         "regiontimer": null,
+         "draw_buffer": null,
+         "headerstr": null,
+         "regiondata": null,
+         "runtime": {
+          "category": null,
+          "visible_rect": {
+           "xmin": 0,
+           "xmax": 0,
+           "ymin": 0,
+           "ymax": 0
+          },
+          "offset_x": 0,
+          "offset_y": 0,
+          "block_name_map": null
+         }
+        },
+        "v2d": {
+         "tot": {
+          "xmin": 0,
+          "xmax": 307,
+          "ymin": 0,
+          "ymax": 35
+         },
+         "cur": {
+          "xmin": 0,
+          "xmax": 1586,
+          "ymin": 0,
+          "ymax": 35
+         },
+         "vert": {
+          "xmin": 0,
+          "xmax": 0,
+          "ymin": 0,
+          "ymax": 0
+         },
+         "hor": {
+          "xmin": 0,
+          "xmax": 0,
+          "ymin": 0,
+          "ymax": 0
+         },
+         "mask": {
+          "xmin": 0,
+          "xmax": 1585,
+          "ymin": 0,
+          "ymax": 34
+         },
+         "min": [
+          2842,
+          25
+         ],
+         "max": [
+          2842,
+          25
+         ],
+         "minzoom": 1,
+         "maxzoom": 1,
+         "scroll": 0,
+         "scroll_ui": 0,
+         "keeptot": 2,
+         "keepzoom": 771,
+         "keepofs": 4,
+         "flag": 1024,
+         "align": 10,
+         "winx": 1586,
+         "winy": 35,
+         "oldwinx": 1586,
+         "oldwiny": 35,
+         "around": 0,
+         "alpha_vert": -1,
+         "alpha_hor": -1,
+         "page_size_y": 0,
+         "sms": null,
+         "smooth_timer": null
+        },
+        "winrct": {
+         "xmin": 0,
+         "xmax": 1585,
+         "ymin": 945,
+         "ymax": 979
+        },
+        "drawrct": {
+         "xmin": 0,
+         "xmax": 0,
+         "ymin": 0,
+         "ymax": 0
+        },
+        "winx": 1586,
+        "winy": 35,
+        "category_scroll": 0,
+        "visible": 1,
+        "regiontype": 12,
+        "alignment": 1,
+        "flag": 0,
+        "sizex": 1153,
+        "sizey": 25,
+        "do_draw": 0,
+        "do_draw_paintcursor": 0,
+        "overlap": 1,
+        "flagfullscreen": 0,
+        "type": null,
+        "uiblocks": {
+         "first": null,
+         "last": null
+        },
+        "panels": {
+         "first": null,
+         "last": null
+        },
+        "panels_category_active": {
+         "first": null,
+         "last": null
+        },
+        "ui_lists": {
+         "first": null,
+         "last": null
+        },
+        "ui_previews": {
+         "first": null,
+         "last": null
+        },
+        "handlers": {
+         "first": null,
+         "last": null
+        },
+        "panels_category": {
+         "first": null,
+         "last": null
+        },
+        "gizmo_map": null,
+        "regiontimer": null,
+        "draw_buffer": null,
+        "headerstr": null,
+        "regiondata": null,
+        "runtime": {
+         "category": null,
+         "visible_rect": {
+          "xmin": 0,
+          "xmax": 0,
+          "ymin": 0,
+          "ymax": 0
+         },
+         "offset_x": 0,
+         "offset_y": 0,
+         "block_name_map": null
+        }
+       },
+       "v2d": {
+        "tot": {
+         "xmin": 0,
+         "xmax": 1,
+         "ymin": -1,
+         "ymax": 0
+        },
+        "cur": {
+         "xmin": 0,
+         "xmax": 1586,
+         "ymin": -96,
+         "ymax": 0
+        },
+        "vert": {
+         "xmin": 1571,
+         "xmax": 1586,
+         "ymin": 0,
+         "ymax": 95
+        },
+        "hor": {
+         "xmin": 0,
+         "xmax": 0,
+         "ymin": 0,
+         "ymax": 0
+        },
+        "mask": {
+         "xmin": 0,
+         "xmax": 1585,
+         "ymin": 0,
+         "ymax": 95
+        },
+        "min": [
+         0,
+         0
+        ],
+        "max": [
+         0,
+         0
+        ],
+        "minzoom": 0.5,
+        "maxzoom": 2,
+        "scroll": 642,
+        "scroll_ui": 0,
+        "keeptot": 3,
+        "keepzoom": 775,
+        "keepofs": 16,
+        "flag": 2048,
+        "align": 6,
+        "winx": 1586,
+        "winy": 96,
+        "oldwinx": 1586,
+        "oldwiny": 96,
+        "around": 0,
+        "alpha_vert": 0,
+        "alpha_hor": -1,
+        "page_size_y": 95,
+        "sms": null,
+        "smooth_timer": null
+       },
+       "winrct": {
+        "xmin": 0,
+        "xmax": 0,
+        "ymin": 0,
+        "ymax": 0
+       },
+       "drawrct": {
+        "xmin": 0,
+        "xmax": 0,
+        "ymin": 0,
+        "ymax": 0
+       },
+       "winx": 1,
+       "winy": 1,
+       "category_scroll": 0,
+       "visible": 0,
+       "regiontype": 14,
+       "alignment": 2,
+       "flag": 1024,
+       "sizex": 1153,
+       "sizey": 70,
+       "do_draw": 1,
+       "do_draw_paintcursor": 0,
+       "overlap": 1,
+       "flagfullscreen": 0,
+       "type": null,
+       "uiblocks": {
+        "first": null,
+        "last": null
+       },
+       "panels": {
+        "first": null,
+        "last": null
+       },
+       "panels_category_active": {
+        "first": null,
+        "last": null
+       },
+       "ui_lists": {
+        "first": null,
+        "last": null
+       },
+       "ui_previews": {
+        "first": null,
+        "last": null
+       },
+       "handlers": {
+        "first": null,
+        "last": null
+       },
+       "panels_category": {
+        "first": null,
+        "last": null
+       },
+       "gizmo_map": null,
+       "regiontimer": null,
+       "draw_buffer": null,
+       "headerstr": null,
+       "runtime": {
+        "category": null,
+        "visible_rect": {
+         "xmin": 0,
+         "xmax": 0,
+         "ymin": 0,
+         "ymax": 0
+        },
+        "offset_x": 0,
+        "offset_y": 0,
+        "block_name_map": null
+       }
+      },
+      "v2d": {
+       "tot": {
+        "xmin": 0,
+        "xmax": 1,
+        "ymin": 0,
+        "ymax": 1
+       },
+       "cur": {
+        "xmin": 0,
+        "xmax": 1586,
+        "ymin": 0,
+        "ymax": 29
+       },
+       "vert": {
+        "xmin": 0,
+        "xmax": 0,
+        "ymin": 0,
+        "ymax": 0
+       },
+       "hor": {
+        "xmin": 0,
+        "xmax": 0,
+        "ymin": 0,
+        "ymax": 0
+       },
+       "mask": {
+        "xmin": 0,
+        "xmax": 1585,
+        "ymin": 0,
+        "ymax": 28
+       },
+       "min": [
+        0,
+        0
+       ],
+       "max": [
+        0,
+        0
+       ],
+       "minzoom": 1,
+       "maxzoom": 1,
+       "scroll": 0,
+       "scroll_ui": 0,
+       "keeptot": 2,
+       "keepzoom": 771,
+       "keepofs": 4,
+       "flag": 0,
+       "align": 10,
+       "winx": 1586,
+       "winy": 29,
+       "oldwinx": 1586,
+       "oldwiny": 29,
+       "around": 0,
+       "alpha_vert": -1,
+       "alpha_hor": -1,
+       "page_size_y": 0,
+       "sms": null,
+       "smooth_timer": null
+      },
+      "winrct": {
+       "xmin": 0,
+       "xmax": 0,
+       "ymin": 0,
+       "ymax": 0
+      },
+      "drawrct": {
+       "xmin": 0,
+       "xmax": 0,
+       "ymin": 0,
+       "ymax": 0
+      },
+      "winx": 1,
+      "winy": 1,
+      "category_scroll": 0,
+      "visible": 0,
+      "regiontype": 15,
+      "alignment": 98,
+      "flag": 1024,
+      "sizex": 1153,
+      "sizey": 21,
+      "do_draw": 1,
+      "do_draw_paintcursor": 0,
+      "overlap": 1,
+      "flagfullscreen": 0,
+      "type": null,
+      "uiblocks": {
+       "first": null,
+       "last": null
+      },
+      "panels": {
+       "first": null,
+       "last": null
+      },
+      "panels_category_active": {
+       "first": null,
+       "last": null
+      },
+      "ui_lists": {
+       "first": null,
+       "last": null
+      },
+      "ui_previews": {
+       "first": null,
+       "last": null
+      },
+      "handlers": {
+       "first": null,
+       "last": null
+      },
+      "panels_category": {
+       "first": null,
+       "last": null
+      },
+      "gizmo_map": null,
+      "regiontimer": null,
+      "draw_buffer": null,
+      "headerstr": null,
+      "regiondata": null,
+      "runtime": {
+       "category": null,
+       "visible_rect": {
+        "xmin": 0,
+        "xmax": 0,
+        "ymin": 0,
+        "ymax": 0
+       },
+       "offset_x": 0,
+       "offset_y": 0,
+       "block_name_map": null
+      }
+     },
+     "v2d": {
+      "tot": {
+       "xmin": 0,
+       "xmax": 131,
+       "ymin": -275,
+       "ymax": 0
+      },
+      "cur": {
+       "xmin": 0,
+       "xmax": 131.104736328125,
+       "ymin": -1198.46826171875,
+       "ymax": 0
+      },
+      "vert": {
+       "xmin": 83,
+       "xmax": 92,
+       "ymin": 0,
+       "ymax": 840
+      },
+      "hor": {
+       "xmin": 0,
+       "xmax": 158,
+       "ymin": 0,
+       "ymax": 17
+      },
+      "mask": {
+       "xmin": 0,
+       "xmax": 91,
+       "ymin": 0,
+       "ymax": 840
+      },
+      "min": [
+       0,
+       0
+      ],
+      "max": [
+       0,
+       0
+      ],
+      "minzoom": 0.5,
+      "maxzoom": 2,
+      "scroll": 1922,
+      "scroll_ui": 0,
+      "keeptot": 1,
+      "keepzoom": 7,
+      "keepofs": 18,
+      "flag": 1024,
+      "align": 6,
+      "winx": 92,
+      "winy": 841,
+      "oldwinx": 92,
+      "oldwiny": 841,
+      "around": 0,
+      "alpha_vert": 0,
+      "alpha_hor": -1,
+      "page_size_y": 0,
+      "sms": null,
+      "smooth_timer": null
+     },
+     "winrct": {
+      "xmin": 0,
+      "xmax": 91,
+      "ymin": 104,
+      "ymax": 944
+     },
+     "drawrct": {
+      "xmin": 0,
+      "xmax": 0,
+      "ymin": 0,
+      "ymax": 0
+     },
+     "winx": 92,
+     "winy": 841,
+     "category_scroll": 0,
+     "visible": 1,
+     "regiontype": 5,
+     "alignment": 3,
+     "flag": 0,
+     "sizex": 67,
+     "sizey": 612,
+     "do_draw": 0,
+     "do_draw_paintcursor": 0,
+     "overlap": 1,
+     "flagfullscreen": 0,
+     "type": null,
+     "uiblocks": {
+      "first": null,
+      "last": null
+     },
+     "panels": {},
+     "panels_category_active": {
+      "first": null,
+      "last": null
+     },
+     "ui_lists": {
+      "first": null,
+      "last": null
+     },
+     "ui_previews": {
+      "first": null,
+      "last": null
+     },
+     "handlers": {
+      "first": null,
+      "last": null
+     },
+     "panels_category": {
+      "first": null,
+      "last": null
+     },
+     "gizmo_map": null,
+     "regiontimer": null,
+     "draw_buffer": null,
+     "headerstr": null,
+     "regiondata": null,
+     "runtime": {
+      "category": null,
+      "visible_rect": {
+       "xmin": 0,
+       "xmax": 0,
+       "ymin": 0,
+       "ymax": 0
+      },
+      "offset_x": 0,
+      "offset_y": 0,
+      "block_name_map": null
+     }
+    },
+    "v2d": {
+     "tot": {
+      "xmin": 0,
+      "xmax": 1,
+      "ymin": -1,
+      "ymax": 0
+     },
+     "cur": {
+      "xmin": 0,
+      "xmax": 1,
+      "ymin": -1,
+      "ymax": 0
+     },
+     "vert": {
+      "xmin": -7,
+      "xmax": 1,
+      "ymin": 8,
+      "ymax": 0
+     },
+     "hor": {
+      "xmin": 0,
+      "xmax": 0,
+      "ymin": 0,
+      "ymax": 8
+     },
+     "mask": {
+      "xmin": 0,
+      "xmax": 0,
+      "ymin": 0,
+      "ymax": 0
+     },
+     "min": [
+      0,
+      0
+     ],
+     "max": [
+      0,
+      0
+     ],
+     "minzoom": 0.5,
+     "maxzoom": 2,
+     "scroll": 1418,
+     "scroll_ui": 0,
+     "keeptot": 1,
+     "keepzoom": 7,
+     "keepofs": 18,
+     "flag": 1024,
+     "align": 6,
+     "winx": 1,
+     "winy": 1,
+     "oldwinx": 1,
+     "oldwiny": 1,
+     "around": 0,
+     "alpha_vert": 0,
+     "alpha_hor": 0,
+     "page_size_y": 0,
+     "sms": null,
+     "smooth_timer": null
+    },
+    "winrct": {
+     "xmin": 1585,
+     "xmax": 1585,
+     "ymin": 104,
+     "ymax": 944
+    },
+    "drawrct": {
+     "xmin": 0,
+     "xmax": 0,
+     "ymin": 0,
+     "ymax": 0
+    },
+    "winx": 1,
+    "winy": 1,
+    "category_scroll": 0,
+    "visible": 0,
+    "regiontype": 4,
+    "alignment": 4,
+    "flag": 1,
+    "sizex": 0,
+    "sizey": 0,
+    "do_draw": 1,
+    "do_draw_paintcursor": 0,
+    "overlap": 1,
+    "flagfullscreen": 0,
+    "type": null,
+    "uiblocks": {
+     "first": null,
+     "last": null
+    },
+    "panels": {
+     "first": null,
+     "last": null
+    },
+    "panels_category_active": {
+     "first": null,
+     "last": null
+    },
+    "ui_lists": {
+     "first": null,
+     "last": null
+    },
+    "ui_previews": {
+     "first": null,
+     "last": null
+    },
+    "handlers": {
+     "first": null,
+     "last": null
+    },
+    "panels_category": {
+     "first": null,
+     "last": null
+    },
+    "gizmo_map": null,
+    "regiontimer": null,
+    "draw_buffer": null,
+    "headerstr": null,
+    "regiondata": null,
+    "runtime": {
+     "category": null,
+     "visible_rect": {
+      "xmin": 0,
+      "xmax": 0,
+      "ymin": 0,
+      "ymax": 0
+     },
+     "offset_x": 0,
+     "offset_y": 0,
+     "block_name_map": null
+    }
+   },
+   "v2d": {
+    "tot": {
+     "xmin": 0,
+     "xmax": 377,
+     "ymin": -362,
+     "ymax": 0
+    },
+    "cur": {
+     "xmin": 0,
+     "xmax": 377,
+     "ymin": -363,
+     "ymax": 0
+    },
+    "vert": {
+     "xmin": 368,
+     "xmax": 377,
+     "ymin": 0,
+     "ymax": 362
+    },
+    "hor": {
+     "xmin": 0,
+     "xmax": 0,
+     "ymin": 0,
+     "ymax": 0
+    },
+    "mask": {
+     "xmin": 0,
+     "xmax": 376,
+     "ymin": 0,
+     "ymax": 362
+    },
+    "min": [
+     0,
+     0
+    ],
+    "max": [
+     0,
+     0
+    ],
+    "minzoom": 1,
+    "maxzoom": 1,
+    "scroll": 1922,
+    "scroll_ui": 0,
+    "keeptot": 1,
+    "keepzoom": 7,
+    "keepofs": 18,
+    "flag": 1024,
+    "align": 6,
+    "winx": 377,
+    "winy": 363,
+    "oldwinx": 377,
+    "oldwiny": 363,
+    "around": 0,
+    "alpha_vert": 0,
+    "alpha_hor": -1,
+    "page_size_y": 0,
+    "sms": null,
+    "smooth_timer": null
+   },
+   "winrct": {
+    "xmin": 92,
+    "xmax": 92,
+    "ymin": 104,
+    "ymax": 944
+   },
+   "drawrct": {
+    "xmin": 0,
+    "xmax": 0,
+    "ymin": 0,
+    "ymax": 0
+   },
+   "winx": 1,
+   "winy": 1,
+   "category_scroll": 0,
+   "visible": 0,
+   "regiontype": 8,
+   "alignment": 7,
+   "flag": 29,
+   "sizex": 274,
+   "sizey": 264,
+   "do_draw": 1,
+   "do_draw_paintcursor": 0,
+   "overlap": 1,
+   "flagfullscreen": 0,
+   "type": null,
+   "uiblocks": {
+    "first": null,
+    "last": null
+   },
+   "panels": {},
+   "panels_category_active": {
+    "first": null,
+    "last": null
+   },
+   "ui_lists": {
+    "first": null,
+    "last": null
+   },
+   "ui_previews": {
+    "first": null,
+    "last": null
+   },
+   "handlers": {
+    "first": null,
+    "last": null
+   },
+   "panels_category": {
+    "first": null,
+    "last": null
+   },
+   "gizmo_map": null,
+   "regiontimer": null,
+   "draw_buffer": null,
+   "headerstr": null,
+   "regiondata": null,
+   "runtime": {
+    "category": null,
+    "visible_rect": {
+     "xmin": 0,
+     "xmax": 0,
+     "ymin": 0,
+     "ymax": 0
+    },
+    "offset_x": 0,
+    "offset_y": 0,
+    "block_name_map": null
+   }
+  },
+  "v2d": {
+   "tot": {
+    "xmin": 0,
+    "xmax": 0,
+    "ymin": 0,
+    "ymax": 0
+   },
+   "cur": {
+    "xmin": 0,
+    "xmax": 0,
+    "ymin": 0,
+    "ymax": 0
+   },
+   "vert": {
+    "xmin": 0,
+    "xmax": 0,
+    "ymin": 0,
+    "ymax": 0
+   },
+   "hor": {
+    "xmin": 0,
+    "xmax": 0,
+    "ymin": 0,
+    "ymax": 0
+   },
+   "mask": {
+    "xmin": 0,
+    "xmax": 0,
+    "ymin": 0,
+    "ymax": 0
+   },
+   "min": [
+    0,
+    0
+   ],
+   "max": [
+    0,
+    0
+   ],
+   "minzoom": 0,
+   "maxzoom": 0,
+   "scroll": 0,
+   "scroll_ui": 0,
+   "keeptot": 0,
+   "keepzoom": 0,
+   "keepofs": 0,
+   "flag": 0,
+   "align": 0,
+   "winx": 0,
+   "winy": 0,
+   "oldwinx": 0,
+   "oldwiny": 0,
+   "around": 0,
+   "alpha_vert": -1,
+   "alpha_hor": -1,
+   "page_size_y": 0,
+   "sms": null,
+   "smooth_timer": null
+  },
+  "winrct": {
+   "xmin": 0,
+   "xmax": 1585,
+   "ymin": 104,
+   "ymax": 1014
+  },
+  "drawrct": {
+   "xmin": 0,
+   "xmax": 0,
+   "ymin": 0,
+   "ymax": 0
+  },
+  "winx": 1586,
+  "winy": 911,
+  "category_scroll": 0,
+  "visible": 1,
+  "regiontype": 0,
+  "alignment": 0,
+  "flag": 0,
+  "sizex": 1153,
+  "sizey": 662,
+  "do_draw": 0,
+  "do_draw_paintcursor": 1,
+  "overlap": 0,
+  "flagfullscreen": 0,
+  "type": null,
+  "uiblocks": {
+   "first": null,
+   "last": null
+  },
+  "panels": {
+   "first": null,
+   "last": null
+  },
+  "panels_category_active": {
+   "first": null,
+   "last": null
+  },
+  "ui_lists": {
+   "first": null,
+   "last": null
+  },
+  "ui_previews": {
+   "first": null,
+   "last": null
+  },
+  "handlers": {
+   "first": null,
+   "last": null
+  },
+  "panels_category": {
+   "first": null,
+   "last": null
+  },
+  "gizmo_map": null,
+  "regiontimer": null,
+  "draw_buffer": null,
+  "headerstr": null,
+  "runtime": {
+   "category": null,
+   "visible_rect": {
+    "xmin": 91,
+    "xmax": 1585,
+    "ymin": 0,
+    "ymax": 841
+   },
+   "offset_x": 0,
+   "offset_y": 0,
+   "block_name_map": null
+  }
+ },
+ "animtimer": null,
+ "context": null,
+ "tool_tip": null,
+ "preview": null
+}

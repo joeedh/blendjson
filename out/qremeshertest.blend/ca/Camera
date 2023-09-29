@@ -1,0 +1,285 @@
+{
+ "id": {
+  "next": null,
+  "prev": null,
+  "newid": null,
+  "lib": null,
+  "asset_data": null,
+  "name": "Camera",
+  "flag": 0,
+  "tag": 0,
+  "us": 0,
+  "icon_id": 0,
+  "recalc": 0,
+  "recalc_up_to_undo_push": 0,
+  "recalc_after_undo_push": 0,
+  "session_uuid": 235,
+  "properties": {
+   "type": 6,
+   "subtype": 0,
+   "flag": 0,
+   "name": "",
+   "data": [
+    {
+     "type": 6,
+     "subtype": 0,
+     "flag": 0,
+     "name": "cycles",
+     "data": [],
+     "len": 12,
+     "totallen": 0,
+     "ui_data": null
+    }
+   ],
+   "len": 1,
+   "totallen": 0,
+   "ui_data": null
+  },
+  "override_library": null,
+  "orig_id": null,
+  "py_instance": null,
+  "library_weak_reference": null,
+  "runtime": {
+   "remap": {
+    "status": 0,
+    "skipped_refcounted": 0,
+    "skipped_direct": 0,
+    "skipped_indirect": 0
+   }
+  }
+ },
+ "adt": null,
+ "type": 0,
+ "dtx": 0,
+ "flag": 4,
+ "passepartalpha": 0.5,
+ "clipsta": 0.10000000149011612,
+ "clipend": 100,
+ "lens": 50,
+ "ortho_scale": 7.314285755157471,
+ "drawsize": 1,
+ "sensor_x": 36,
+ "sensor_y": 24,
+ "shiftx": 0,
+ "shifty": 0,
+ "YF_dofdist": 0,
+ "sensor_fit": 0,
+ "panorama_type": 2,
+ "fisheye_fov": 3.1415927410125732,
+ "fisheye_lens": 10.5,
+ "latitude_min": -1.5707963705062866,
+ "latitude_max": 1.5707963705062866,
+ "longitude_min": -3.1415927410125732,
+ "longitude_max": 3.1415927410125732,
+ "fisheye_polynomial_k0": -0.000011735143743862864,
+ "fisheye_polynomial_k1": -0.019988736137747765,
+ "fisheye_polynomial_k2": -0.0000033525323033245513,
+ "fisheye_polynomial_k3": 0.0000030992753181635635,
+ "fisheye_polynomial_k4": -2.60646473293491e-8,
+ "ipo": null,
+ "dof_ob": null,
+ "gpu_dof": {
+  "focus_distance": 0,
+  "fstop": 128,
+  "focal_length": 50,
+  "sensor": 36,
+  "rotation": 0,
+  "ratio": 1,
+  "num_blades": 0,
+  "high_quality": 0
+ },
+ "dof": {
+  "focus_object": null,
+  "focus_subtarget": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "focus_distance": 10,
+  "aperture_fstop": 2.799999952316284,
+  "aperture_rotation": 0,
+  "aperture_ratio": 1,
+  "aperture_blades": 0,
+  "flag": 0
+ },
+ "bg_images": {
+  "first": null,
+  "last": null
+ },
+ "stereo": {
+  "interocular_distance": 0.06499999761581421,
+  "convergence_distance": 1.9499999284744263,
+  "convergence_mode": 0,
+  "pivot": 0,
+  "flag": 0,
+  "pole_merge_angle_from": 1.0471975803375244,
+  "pole_merge_angle_to": 1.3089969158172607
+ },
+ "runtime": {
+  "drw_corners": [
+   [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ],
+   [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     0
+    ]
+   ]
+  ],
+  "drw_tria": [
+   [
+    0,
+    0
+   ],
+   [
+    0,
+    0
+   ]
+  ],
+  "drw_depth": [
+   0,
+   0
+  ],
+  "drw_focusmat": [
+   [
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0
+   ]
+  ],
+  "drw_normalmat": [
+   [
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0
+   ]
+  ]
+ }
+}
