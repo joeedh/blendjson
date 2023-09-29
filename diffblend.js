@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import './src/diffblend.js';
-import {readBlendFile, writeBlendFolder} from './src/diffblend.js';
+import {readBlendFile, writeBlendFile} from './src/diffblend.js';
 import {configDef, config} from './src/config.js';
 import pathmod from 'path';
 
@@ -29,6 +29,13 @@ function main(args) {
   if (config.folder) {
     blend1.compressFile();
     blend1.writeBlendFolder(pathmod.basename(path1));
+  }
+
+  if (config.write) {
+    writeBlendFile(blend1, "out.blend");
+
+    let blend2 = readBlendFile("out.blend");
+    blend2.printTree();
   }
 }
 

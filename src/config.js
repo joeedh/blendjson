@@ -8,4 +8,5 @@ export * from './config_parse.js';
 export const configDef = new ConfigDef().from({
   "print" : ["bool", false, "Prints file tree"],
   "folder": ["bool", false, "Write tree to folder"],
+  "write" : ["bool", false, "Write .blend file"],
 });

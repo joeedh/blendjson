@@ -3,6 +3,123 @@ export const Endian = {
   LITTLE: true
 };
 
+export class BinWriter {
+  endian = Endian.LITTLE;
+  dview = new DataView(new ArrayBuffer(32));
+  data = [];
+  u8 = new Uint8Array(this.dview.buffer);
+
+  constructor(data = []) {
+    this.data = data;
+  }
+
+  #write(n) {
+    for (let i = 0; i < n; i++) {
+      this.data.push(this.u8[i]);
+    }
+  }
+
+  char(s) {
+    this.data.push(s.charCodeAt(0));
+    return this;
+  }
+
+  /* Write a sequence of characters, is not null-terminated. */
+  chars(s) {
+    for (let i = 0; i < s.length; i++) {
+      this.data.push(s.charCodeAt(i));
+    }
+    return this;
+  }
+
+  /* Write a null-terminated string. */
+  string(s, width) {
+    let slen = Math.min(s.length, width - 1);
+    let wlen = width - slen;
+
+    for (let i = 0; i < slen; i++) {
+      this.data.push(s.charCodeAt(i));
+    }
+    for (let i = 0; i < wlen; i++) {
+      this.data.push(0);
+    }
+
+    return this;
+  }
+
+  buffer(buf) {
+    let u8 = new Uint8Array(buf);
+    for (let i = 0; i < u8.length; i++) {
+      this.data.push(u8[i]);
+    }
+    return this;
+  }
+
+  float32(f) {
+    this.dview.setFloat32(0, f, this.endian);
+    this.#write(4);
+    return this;
+  }
+
+  float64(f) {
+    this.dview.setFloat64(0, f, this.endian);
+    this.#write(8);
+    return this;
+  }
+
+  uint8(i) {
+    this.dview.setUint8(0, i);
+    this.#write(1);
+    return this;
+  }
+
+  int8(i) {
+    this.dview.setInt8(0, i);
+    this.#write(1);
+    return this;
+  }
+
+  uint16(i) {
+    this.dview.setUint16(0, i, this.endian);
+    this.#write(2);
+    return this;
+  }
+
+  int16(i) {
+    this.dview.setInt16(0, i, this.endian);
+    this.#write(2);
+    return this;
+  }
+
+  uint32(i) {
+    this.dview.setUint32(0, i, this.endian);
+    this.#write(4);
+    return this;
+  }
+
+  int32(i) {
+    this.dview.setInt32(0, i, this.endian);
+    this.#write(4);
+    return this;
+  }
+
+  uint64(i) {
+    this.dview.setBigUint64(0, i, this.endian);
+    this.#write(8);
+    return this;
+  }
+
+  int64(i) {
+    this.dview.setBigInt64(0, i, this.endian);
+    this.#write(8);
+    return this;
+  }
+
+  finish() {
+    return new Uint8Array(this.data).buffer;
+  }
+}
+
 export class BinReader {
   endian = Endian.LITTLE;
   dview = null;

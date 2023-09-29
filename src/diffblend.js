@@ -1,6 +1,6 @@
-import './util.js';
+import * as util from './util.js';
 import './sdna.js';
-import {BlendReader} from './blendfile.js';
+import {BlendReader, BlendWriter} from './blendfile.js';
 import './config.js';
 import {normpath} from './pathutil.js';
 import fs from 'fs';
@@ -19,6 +19,14 @@ export function readBlendFile(path) {
   return reader.bfile;
 }
 
-export function writeBlendFolder(path) {
+export function writeBlendFile(bfile, path) {
+  console.log("writing", path);
+
+  let writer = new BlendWriter(bfile);
+  writer.write();
+  let buf = Buffer.from(writer.finish());
+
+  console.log(util.readableSize(buf.byteLength));
+  fs.writeFileSync(path, buf);
 }
 

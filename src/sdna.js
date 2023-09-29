@@ -16,7 +16,7 @@ export class SDNASubClass {
   }
 }
 
-export let SDNATypes = {
+export const SDNATypes = {
   INT    : 1,
   SHORT  : 2,
   CHAR   : 3, //always unsigned
@@ -30,10 +30,15 @@ export let SDNATypes = {
   //e.g. array[3][2] would be stored as type(array[2], type(array[3]));
   VOID    : 11,
   UNSIGNED: 64,
-  TYPEMASK: 15
+  TYPEMASK: 15,
 };
 
-let SDNATypeNames = {}
+let sd = SDNATypes;
+export const SDNANumTypes = new Set([
+  sd.INT, sd.SHORT, sd.CHAR, sd.FLOAT, sd.DOUBLE,
+  sd.LONG, sd.INT64_T
+]);
+export const SDNATypeNames = {}
 
 function build_SDNATypeNames() { //supposedly, doing it this way helps with optimization
   for (let k in SDNATypes) {
@@ -44,10 +49,10 @@ function build_SDNATypeNames() { //supposedly, doing it this way helps with opti
 build_SDNATypeNames();
 
 export let BasicTypes = {
-  "char"    : SDNATypes.CHAR, //sign chars are not actually allowed
+  "char"    : SDNATypes.CHAR | SDNATypes.UNSIGNED, /* chars are unsigned by default. */
   "uchar"   : SDNATypes.CHAR,
-  "int8_t"  : SDNATypes.CHAR | SDNATypes.UNSIGNED,
-  "uint8_t" : SDNATypes.CHAR,
+  "int8_t"  : SDNATypes.CHAR,
+  "uint8_t" : SDNATypes.CHAR | SDNATypes.UNSIGNED,
   "short"   : SDNATypes.SHORT,
   "ushort"  : SDNATypes.SHORT | SDNATypes.UNSIGNED,
   "int"     : SDNATypes.INT,
@@ -493,18 +498,36 @@ export class SDNAStruct {
       return this.#class;
     }
 
-    let props = '';
+    let props = "";
 
     for (let f of this._fields) {
       props += `      ${f.name} = `
-      switch (f.type.type) {
-        case SDNATypes.ARRAY:
+      switch (f.type.type & SDNATypes.TYPEMASK) {
+        /* XXX very simple array support. */
+        case SDNATypes.ARRAY: {
+          if (SDNANumTypes.has(f.type.subtype.type & SDNATypes.TYPEMASK)) {
+            props += '[';
+            for (let i = 0; i < f.type.params; i++) {
+              if (i > 0) {
+                props += ",";
+              }
+
+              props += "0";
+            }
+
+            props += "]";
+          } else {
+            props += "null";
+          }
+
+          break;
+        }
         case SDNATypes.POINTER:
         case SDNATypes.STRUCT:
-          props += 'null';
+          props += "null";
           break;
         default:
-          props += '0';
+          props += "0";
           break;
       }
 
@@ -523,6 +546,28 @@ export class SDNAStruct {
       constructor() {
         this[StructSym] = this.constructor.sdna;
       }
+      
+      _sanitize(visit=new WeakSet()) {
+        visit.add(this);
+        
+        let r = {};
+        
+        for (let k in this) {
+          if (typeof k === "string" && k !== "prototype") {
+            r[k] = this[k];
+            
+            if (typeof r[k] === "object" && r[k] && r[k]._sanitize) {
+              if (visit.has(r[k])) {
+                r[k] = "circular_ref";
+              } else {
+                r[k] = r[k]._sanitize(visit);
+              }
+            }
+          }
+        }
+        
+        return r;
+      }
     }
     `
 
@@ -534,6 +579,10 @@ export class SDNAStruct {
   }
 
   calcSize(offset = 0) {
+    if (this.size > 0) {
+      return this.size;
+    }
+
     let size = 0;
 
     for (let f of this._fields) {

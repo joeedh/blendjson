@@ -14,7 +14,7 @@ export class cachering extends Array {
   next() {
     const ret = this[this.#cur];
 
-    this.#cur = (this.#cur + 1) % this.length;
+    this.#cur = (this.#cur + 1)%this.length;
 
     return ret;
   }
@@ -50,9 +50,9 @@ export function list(iter) {
   return ret;
 }
 
-export function indent(n, c=" ") {
+export function indent(n, c = " ") {
   let s = '';
-  for (let i=0; i<n; i++) {
+  for (let i = 0; i < n; i++) {
     s += c;
   }
 
@@ -79,14 +79,14 @@ export class MersenneRandom {
   }
 
   /** normal-ish distribution */
-  nrandom(n=3) {
+  nrandom(n = 3) {
     let ret = 0.0;
 
-    for (let i=0; i<n; i++) {
+    for (let i = 0; i < n; i++) {
       ret += this.random();
     }
 
-    return ret / n;
+    return ret/n;
   }
 
   seed(seed) {
@@ -151,3 +151,16 @@ export function seed(n) {
   _mt.seed(n);
 }
 
+export function readableSize(n, digits = 2) {
+  if (n >= 1024*1024*1024) {
+    return (n/1024/1024/1024).toFixed(digits) + "gb";
+  }
+  else if (n >= 1024*1024) {
+    return (n/1024/1024).toFixed(digits) + "mb";
+  }
+  else if (n >= 1024) {
+    return (n/1024).toFixed(digits) + "kb";
+  }
+
+  return n.toFixed(digits);
+}
