@@ -13,7 +13,7 @@
   "recalc": 0,
   "recalc_up_to_undo_push": 0,
   "recalc_after_undo_push": 0,
-  "session_uuid": 236,
+  "session_uuid": 245,
   "properties": null,
   "override_library": null,
   "orig_id": null,
@@ -64,6 +64,8 @@
  "volume_fac": 1,
  "spec_fac": 1,
  "att_dist": 40,
+ "shadow_softness_factor": 1,
+ "shadow_trace_distance": 10,
  "preview": {
   "w": [
    0,

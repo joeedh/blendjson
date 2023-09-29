@@ -8,6 +8,17 @@ import zlib from 'zlib';
 import pathmod from 'path';
 
 export class BlendReadError extends Error {}
+const IS_WINDOWS = process.platform.startsWith("win");
+
+export function JSONstringify(obj, param, indent) {
+  let buf = JSON.stringify(obj, param, indent);
+
+  if (IS_WINDOWS) {
+    buf = buf.replace(/\n/g, "\r\n");
+  }
+
+  return buf;
+}
 
 import {ParentSym, StructSym, PointerSym} from './enums.js';
 /* Print a warning on unknown pointers
@@ -63,7 +74,7 @@ export class BlendFile {
         fs.writeFileSync(`${path}/rend.bin`, Buffer.from(bh.data));
       } else if (bh.id === "GLOB") {
         let data = this.writeStruct(bh.data, blocks);
-        fs.writeFileSync(`${path}/glob`, JSON.stringify(data, undefined, 1));
+        fs.writeFileSync(`${path}/glob`, JSONstringify(data, undefined, 1));
       }
     }
 
@@ -72,7 +83,7 @@ export class BlendFile {
       endian : this.endian
     };
 
-    fs.writeFileSync(`${path}/meta`, JSON.stringify(meta, undefined, 1));
+    fs.writeFileSync(`${path}/meta`, JSONstringify(meta, undefined, 1));
 
     let okmap = [];
 
@@ -115,7 +126,7 @@ export class BlendFile {
         name = safename(name);
 
         let buf = this.writeStruct(obj, blocks);
-        buf = JSON.stringify(buf, undefined, 1);
+        buf = JSONstringify(buf, undefined, 1);
 
         let outpath = `${path}/${k}/${name}`;
         console.log(outpath);
@@ -131,7 +142,7 @@ export class BlendFile {
     let file = this.makeTree();
 
     console.log("Writing out.json");
-    fs.writeFileSync("out.json", JSON.stringify(file, undefined, 1));
+    fs.writeFileSync("out.json", JSONstringify(file, undefined, 1));
   }
 
   compressFile() {

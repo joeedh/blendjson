@@ -2,10 +2,10 @@
  "subvstr": [
   32,
   32,
-  50,
-  53
+  32,
+  48
  ],
- "subversion": 25,
+ "subversion": 0,
  "minversion": 306,
  "minsubversion": 13,
  "curscreen": "SNLayout",

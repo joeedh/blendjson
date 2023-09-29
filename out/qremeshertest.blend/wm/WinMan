@@ -13,7 +13,7 @@
   "recalc": 0,
   "recalc_up_to_undo_push": 0,
   "recalc_after_undo_push": 0,
-  "session_uuid": 126,
+  "session_uuid": 135,
   "properties": null,
   "override_library": null,
   "orig_id": null,
@@ -189,7 +189,7 @@
   "posx": 0,
   "posy": 0,
   "sizex": 1920,
-  "sizey": 1051,
+  "sizey": 1042,
   "windowstate": 1,
   "active": 1,
   "cursor": 3,
@@ -205,8 +205,8 @@
   "event_queue_check_drag_handled": 0,
   "event_queue_consecutive_gesture_type": 0,
   "event_queue_consecutive_gesture_xy": [
-   944,
-   458
+   844,
+   350
   ],
   "event_queue_consecutive_gesture_data": null,
   "eventstate": null,
@@ -243,7 +243,7 @@
  "winactive": "#ref#10",
  "windows": {},
  "init_flag": 3,
- "file_saved": 0,
+ "file_saved": 1,
  "op_undo_depth": 0,
  "outliner_sync_select_dirty": 0,
  "operators": {

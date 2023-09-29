@@ -11,9 +11,9 @@
   "us": 0,
   "icon_id": 0,
   "recalc": 0,
-  "recalc_up_to_undo_push": 0,
+  "recalc_up_to_undo_push": 8195,
   "recalc_after_undo_push": 0,
-  "session_uuid": 149,
+  "session_uuid": 158,
   "properties": {
    "type": 6,
    "subtype": 0,
@@ -5800,10 +5800,10 @@
   "edge_mode_live_unwrap": 0,
   "transform_pivot_point": 3,
   "transform_flag": 0,
-  "snap_mode": 64,
   "snap_node_mode": -128,
-  "snap_uv_mode": 64,
-  "snap_anim_mode": 1024,
+  "snap_mode": 256,
+  "snap_uv_mode": 256,
+  "snap_anim_mode": 1,
   "snap_flag": 768,
   "snap_flag_node": 0,
   "snap_flag_seq": 0,
@@ -5971,7 +5971,7 @@
    "table": null,
    "segments": null,
    "flag": 1,
-   "changed_timestamp": 26,
+   "changed_timestamp": 27,
    "view_rect": {
     "xmin": 0,
     "xmax": 1,
@@ -10396,9 +10396,9 @@
    "us": 0,
    "icon_id": 0,
    "recalc": 0,
-   "recalc_up_to_undo_push": 0,
+   "recalc_up_to_undo_push": 8195,
    "recalc_after_undo_push": 0,
-   "session_uuid": 150,
+   "session_uuid": 159,
    "properties": null,
    "override_library": null,
    "orig_id": null,
@@ -10450,6 +10450,8 @@
   }
  },
  "layer_properties": null,
+ "simulation_frame_start": 1,
+ "simulation_frame_end": 250,
  "display": {
   "light_direction": [
    0.5773502588272095,
@@ -11399,6 +11401,9 @@
   "shadow_cube_size": 512,
   "shadow_cascade_size": 1024,
   "shadow_pool_size": 512,
+  "shadow_ray_count": 1,
+  "shadow_step_count": 6,
+  "shadow_normal_bias": 0.019999999552965164,
   "ray_split_settings": 0,
   "ray_tracing_method": 1,
   "reflection_options": {
@@ -11410,6 +11415,14 @@
    "denoise_stages": 7
   },
   "refraction_options": {
+   "screen_trace_quality": 0.25,
+   "screen_trace_thickness": 0.20000000298023224,
+   "resolution_scale": 2,
+   "sample_clamp": 10,
+   "flag": 1,
+   "denoise_stages": 7
+  },
+  "diffuse_options": {
    "screen_trace_quality": 0.25,
    "screen_trace_thickness": 0.20000000298023224,
    "resolution_scale": 2,

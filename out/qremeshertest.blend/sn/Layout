@@ -13,7 +13,7 @@
   "recalc": 0,
   "recalc_up_to_undo_push": 0,
   "recalc_after_undo_push": 0,
-  "session_uuid": 141,
+  "session_uuid": 150,
   "properties": null,
   "override_library": null,
   "orig_id": null,
@@ -127,8 +127,8 @@
          "winrct": {
           "xmin": 0,
           "xmax": 1585,
-          "ymin": 980,
-          "ymax": 1014
+          "ymin": 971,
+          "ymax": 1005
          },
          "drawrct": {
           "xmin": 0,
@@ -258,8 +258,8 @@
         "winrct": {
          "xmin": 0,
          "xmax": 1585,
-         "ymin": 945,
-         "ymax": 979
+         "ymin": 936,
+         "ymax": 970
         },
         "drawrct": {
          "xmin": 0,
@@ -388,9 +388,9 @@
        },
        "winrct": {
         "xmin": 0,
-        "xmax": 0,
-        "ymin": 0,
-        "ymax": 0
+        "xmax": 1585,
+        "ymin": 103,
+        "ymax": 103
        },
        "drawrct": {
         "xmin": 0,
@@ -398,13 +398,13 @@
         "ymin": 0,
         "ymax": 0
        },
-       "winx": 1,
+       "winx": 1586,
        "winy": 1,
        "category_scroll": 0,
        "visible": 0,
        "regiontype": 14,
        "alignment": 2,
-       "flag": 1024,
+       "flag": 1025,
        "sizex": 1153,
        "sizey": 70,
        "do_draw": 1,
@@ -536,7 +536,7 @@
       "alignment": 98,
       "flag": 1024,
       "sizex": 1153,
-      "sizey": 21,
+      "sizey": 22,
       "do_draw": 1,
       "do_draw_paintcursor": 0,
       "overlap": 1,
@@ -598,14 +598,14 @@
       "cur": {
        "xmin": 0,
        "xmax": 131.104736328125,
-       "ymin": -1198.46826171875,
+       "ymin": -1187.06787109375,
        "ymax": 0
       },
       "vert": {
        "xmin": 83,
        "xmax": 92,
        "ymin": 0,
-       "ymax": 840
+       "ymax": 832
       },
       "hor": {
        "xmin": 0,
@@ -617,7 +617,7 @@
        "xmin": 0,
        "xmax": 91,
        "ymin": 0,
-       "ymax": 840
+       "ymax": 832
       },
       "min": [
        0,
@@ -637,9 +637,9 @@
       "flag": 1024,
       "align": 6,
       "winx": 92,
-      "winy": 841,
+      "winy": 833,
       "oldwinx": 92,
-      "oldwiny": 841,
+      "oldwiny": 833,
       "around": 0,
       "alpha_vert": 0,
       "alpha_hor": -1,
@@ -650,8 +650,8 @@
      "winrct": {
       "xmin": 0,
       "xmax": 91,
-      "ymin": 104,
-      "ymax": 944
+      "ymin": 103,
+      "ymax": 935
      },
      "drawrct": {
       "xmin": 0,
@@ -660,14 +660,14 @@
       "ymax": 0
      },
      "winx": 92,
-     "winy": 841,
+     "winy": 833,
      "category_scroll": 0,
      "visible": 1,
      "regiontype": 5,
      "alignment": 3,
      "flag": 0,
      "sizex": 67,
-     "sizey": 612,
+     "sizey": 606,
      "do_draw": 0,
      "do_draw_paintcursor": 0,
      "overlap": 1,
@@ -778,8 +778,8 @@
     "winrct": {
      "xmin": 1585,
      "xmax": 1585,
-     "ymin": 104,
-     "ymax": 944
+     "ymin": 103,
+     "ymax": 935
     },
     "drawrct": {
      "xmin": 0,
@@ -909,8 +909,8 @@
    "winrct": {
     "xmin": 92,
     "xmax": 92,
-    "ymin": 104,
-    "ymax": 944
+    "ymin": 103,
+    "ymax": 935
    },
    "drawrct": {
     "xmin": 0,
@@ -1037,8 +1037,8 @@
   "winrct": {
    "xmin": 0,
    "xmax": 1585,
-   "ymin": 104,
-   "ymax": 1014
+   "ymin": 103,
+   "ymax": 1005
   },
   "drawrct": {
    "xmin": 0,
@@ -1047,14 +1047,14 @@
    "ymax": 0
   },
   "winx": 1586,
-  "winy": 911,
+  "winy": 903,
   "category_scroll": 0,
   "visible": 1,
   "regiontype": 0,
   "alignment": 0,
   "flag": 0,
   "sizex": 1153,
-  "sizey": 662,
+  "sizey": 657,
   "do_draw": 0,
   "do_draw_paintcursor": 1,
   "overlap": 0,
@@ -1098,7 +1098,7 @@
     "xmin": 91,
     "xmax": 1585,
     "ymin": 0,
-    "ymax": 841
+    "ymax": 833
    },
    "offset_x": 0,
    "offset_y": 0,

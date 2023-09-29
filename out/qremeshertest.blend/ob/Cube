@@ -11,9 +11,9 @@
   "us": 0,
   "icon_id": 0,
   "recalc": 0,
-  "recalc_up_to_undo_push": 8194,
+  "recalc_up_to_undo_push": 0,
   "recalc_after_undo_push": 0,
-  "session_uuid": 230,
+  "session_uuid": 239,
   "properties": {
    "type": 6,
    "subtype": 0,
