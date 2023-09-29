@@ -27,7 +27,7 @@ export let SDNATypes = {
   POINTER: 8,
   STRUCT : 9,
   ARRAY  : 10, //arrays are store nested, with first dimensions being leaf nodes
-              //e.g. array[3][2] would be stored as type(array[2], type(array[3]));
+  //e.g. array[3][2] would be stored as type(array[2], type(array[3]));
   VOID    : 11,
   UNSIGNED: 64,
   TYPEMASK: 15
@@ -61,6 +61,11 @@ export let BasicTypes = {
   "void"    : SDNATypes.VOID,
 }
 
+export let InvBasicTypes = {};
+for (let k in BasicTypes) {
+  InvBasicTypes[BasicTypes[k]] = k;
+}
+
 function tab(size) {
   let s = "";
 
@@ -78,6 +83,26 @@ export class SDNAType {
     this.type = type;
     this.subtype = subtype;
     this.params = params; //e.g. array dimensions
+  }
+
+  toJSON() {
+    let t = {
+      type  : this.type,
+      params: this.params,
+    }
+
+    if (typeof this.subtype !== "object") {
+      t.subtype = this.subtype;
+    } else if (this.subtype instanceof SDNAStruct) {
+      t.subtype = {
+        structName: this.subtype.name,
+        nr        : this.subtype.nr
+      };
+    } else {
+      t.subtype = this.subtype.toJSON();
+    }
+
+    return t;
   }
 
   read_stack(fd) {
@@ -445,6 +470,24 @@ export class SDNAStruct {
     this.instId = instIdGen++;
   }
 
+  toJSON() {
+    let st = {
+      name  : this.name,
+      size  : this.calcSize(),
+      nr    : this.nr,
+      fields: []
+    };
+
+    for (let f of this._fields) {
+      st.fields.push({
+        name: f.name,
+        type: f.type.toJSON(),
+      });
+    }
+
+    return st;
+  }
+
   getClass() {
     if (this.#class) {
       return this.#class;
@@ -620,6 +663,18 @@ export class SDNA {
     this.structlist = structlist;
     this.types = types;     //an array
     this.typelens = typelens;
+  }
+
+  toJSON() {
+    return {
+      basic_types : SDNATypes,
+      jsonVersion : 0,
+      pointer_size: this.pointer_size,
+      endian      : this.endian,
+      types       : this.types,
+      typelens    : this.typelens,
+      structs     : this.structlist.map(f => f.toJSON())
+    }
   }
 
   //bhead should be a fileapi.BHead object

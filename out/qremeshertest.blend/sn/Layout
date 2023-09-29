@@ -44,7 +44,7 @@
  "do_draw": 0,
  "do_refresh": 0,
  "do_draw_gesture": 0,
- "do_draw_paintcursor": 1,
+ "do_draw_paintcursor": 0,
  "do_draw_drag": 0,
  "skip_handling": 0,
  "scrubbing": 0,

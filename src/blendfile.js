@@ -80,7 +80,8 @@ export class BlendFile {
 
     let meta = {
       version: this.version,
-      endian : this.endian
+      endian : this.endian,
+      sdna : this.sdna.toJSON(),
     };
 
     fs.writeFileSync(`${path}/meta`, JSONstringify(meta, undefined, 1));

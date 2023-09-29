@@ -11,8 +11,8 @@
   "us": 0,
   "icon_id": 0,
   "recalc": 0,
-  "recalc_up_to_undo_push": 8195,
-  "recalc_after_undo_push": 0,
+  "recalc_up_to_undo_push": 8192,
+  "recalc_after_undo_push": 8192,
   "session_uuid": 158,
   "properties": {
    "type": 6,
@@ -4279,7 +4279,7 @@
    "dyntopo": {
     "detail_percent": 25,
     "detail_size": 6,
-    "constant_detail": 8,
+    "constant_detail": 22,
     "flag": 11,
     "mode": 3,
     "inherit": 1048575,
@@ -5833,8 +5833,8 @@
   "sculpt_paint_unified_unprojected_radius": 0.9756743907928467,
   "sculpt_paint_unified_alpha": 0.5,
   "unified_paint_settings": {
-   "size": 225,
-   "unprojected_radius": 1.5540105104446411,
+   "size": 122,
+   "unprojected_radius": 0.7053535580635071,
    "alpha": 0.5,
    "weight": 1,
    "rgb": [
@@ -5849,51 +5849,51 @@
    ],
    "flag": 937,
    "last_rake": [
-    770,
-    463
+    695,
+    543
    ],
    "last_rake_angle": 0,
    "last_stroke_valid": 1,
    "average_stroke_accum": [
-    -61.70585632324219,
-    179.61915588378906,
-    52.48146438598633
+    -157.11769104003906,
+    233.99774169921875,
+    36.82685852050781
    ],
-   "average_stroke_counter": 61,
+   "average_stroke_counter": 93,
    "brush_rotation": 0,
    "brush_rotation_sec": 0,
    "anchored_size": 0,
-   "overlap_factor": 1,
+   "overlap_factor": 0.20000000298023224,
    "draw_inverted": 0,
    "stroke_active": 0,
    "draw_anchored": 0,
    "do_linear_conversion": 0,
    "last_location": [
-    -1.0579414367675781,
-    3.0561070442199707,
-    0.7775197625160217
+    -1.4690674543380737,
+    2.794313907623291,
+    -0.6353517174720764
    ],
    "last_hit": 1,
    "anchored_initial_mouse": [
     0,
     0
    ],
-   "pixel_radius": 225,
-   "initial_pixel_radius": 225,
+   "pixel_radius": 122,
+   "initial_pixel_radius": 122,
    "hard_corner_pin": 1,
    "sharp_angle_limit": 0.61080002784729,
    "distort_correction_mode": 7,
    "hard_edge_mode": 0,
    "smooth_boundary_flag": 47,
-   "start_pixel_radius": 225,
-   "size_pressure_value": 0.4571758508682251,
+   "start_pixel_radius": 122,
+   "size_pressure_value": 0.36415281891822815,
    "tex_mouse": [
-    842.15380859375,
-    290.85076904296875
+    902.2453002929688,
+    196.13720703125
    ],
    "mask_tex_mouse": [
-    842.15380859375,
-    290.85076904296875
+    902.2453002929688,
+    196.13720703125
    ],
    "colorspace": null
   },
@@ -10396,7 +10396,7 @@
    "us": 0,
    "icon_id": 0,
    "recalc": 0,
-   "recalc_up_to_undo_push": 8195,
+   "recalc_up_to_undo_push": 0,
    "recalc_after_undo_push": 0,
    "session_uuid": 159,
    "properties": null,

@@ -205,8 +205,8 @@
   "event_queue_check_drag_handled": 0,
   "event_queue_consecutive_gesture_type": 0,
   "event_queue_consecutive_gesture_xy": [
-   852,
-   425
+   904,
+   368
   ],
   "event_queue_consecutive_gesture_data": null,
   "eventstate": null,
