@@ -44,7 +44,7 @@
  "do_draw": 0,
  "do_refresh": 0,
  "do_draw_gesture": 0,
- "do_draw_paintcursor": 0,
+ "do_draw_paintcursor": 1,
  "do_draw_drag": 0,
  "skip_handling": 0,
  "scrubbing": 0,
@@ -68,7 +68,7 @@
          "v2d": {
           "tot": {
            "xmin": 0,
-           "xmax": 1147,
+           "xmax": 1128,
            "ymin": 0,
            "ymax": 35
           },
@@ -199,7 +199,7 @@
         "v2d": {
          "tot": {
           "xmin": 0,
-          "xmax": 307,
+          "xmax": 1737,
           "ymin": 0,
           "ymax": 35
          },
@@ -404,7 +404,7 @@
        "visible": 0,
        "regiontype": 14,
        "alignment": 2,
-       "flag": 1025,
+       "flag": 1,
        "sizex": 1153,
        "sizey": 70,
        "do_draw": 1,
@@ -518,9 +518,9 @@
       },
       "winrct": {
        "xmin": 0,
-       "xmax": 0,
-       "ymin": 0,
-       "ymax": 0
+       "xmax": 1585,
+       "ymin": 103,
+       "ymax": 133
       },
       "drawrct": {
        "xmin": 0,
@@ -528,13 +528,13 @@
        "ymin": 0,
        "ymax": 0
       },
-      "winx": 1,
-      "winy": 1,
+      "winx": 1586,
+      "winy": 31,
       "category_scroll": 0,
       "visible": 0,
       "regiontype": 15,
       "alignment": 98,
-      "flag": 1024,
+      "flag": 0,
       "sizex": 1153,
       "sizey": 22,
       "do_draw": 1,
@@ -592,20 +592,20 @@
       "tot": {
        "xmin": 0,
        "xmax": 131,
-       "ymin": -275,
+       "ymin": -1227,
        "ymax": 0
       },
       "cur": {
        "xmin": 0,
        "xmax": 131.104736328125,
-       "ymin": -1187.06787109375,
+       "ymin": -1142.8912353515625,
        "ymax": 0
       },
       "vert": {
        "xmin": 83,
        "xmax": 92,
        "ymin": 0,
-       "ymax": 832
+       "ymax": 801
       },
       "hor": {
        "xmin": 0,
@@ -617,7 +617,7 @@
        "xmin": 0,
        "xmax": 91,
        "ymin": 0,
-       "ymax": 832
+       "ymax": 801
       },
       "min": [
        0,
@@ -629,7 +629,7 @@
       ],
       "minzoom": 0.5,
       "maxzoom": 2,
-      "scroll": 1922,
+      "scroll": 1410,
       "scroll_ui": 0,
       "keeptot": 1,
       "keepzoom": 7,
@@ -637,9 +637,9 @@
       "flag": 1024,
       "align": 6,
       "winx": 92,
-      "winy": 833,
+      "winy": 802,
       "oldwinx": 92,
-      "oldwiny": 833,
+      "oldwiny": 802,
       "around": 0,
       "alpha_vert": 0,
       "alpha_hor": -1,
@@ -650,7 +650,7 @@
      "winrct": {
       "xmin": 0,
       "xmax": 91,
-      "ymin": 103,
+      "ymin": 134,
       "ymax": 935
      },
      "drawrct": {
@@ -660,14 +660,14 @@
       "ymax": 0
      },
      "winx": 92,
-     "winy": 833,
+     "winy": 802,
      "category_scroll": 0,
      "visible": 1,
      "regiontype": 5,
      "alignment": 3,
      "flag": 0,
      "sizex": 67,
-     "sizey": 606,
+     "sizey": 583,
      "do_draw": 0,
      "do_draw_paintcursor": 0,
      "overlap": 1,
@@ -778,7 +778,7 @@
     "winrct": {
      "xmin": 1585,
      "xmax": 1585,
-     "ymin": 103,
+     "ymin": 134,
      "ymax": 935
     },
     "drawrct": {
@@ -909,7 +909,7 @@
    "winrct": {
     "xmin": 92,
     "xmax": 92,
-    "ymin": 103,
+    "ymin": 134,
     "ymax": 935
    },
    "drawrct": {
@@ -1097,7 +1097,7 @@
    "visible_rect": {
     "xmin": 91,
     "xmax": 1585,
-    "ymin": 0,
+    "ymin": 30,
     "ymax": 833
    },
    "offset_x": 0,

@@ -3643,7 +3643,7 @@
   },
   "sculpt": {
    "paint": {
-    "brush": "BRSimplify",
+    "brush": "BRSculptDraw",
     "tool_slots": [
      {
       "brush": null
@@ -3947,10 +3947,10 @@
    "detail_percent": 25,
    "automasking_cavity_blur_steps": 0,
    "automasking_cavity_factor": 0.5,
-   "automasking_start_normal_limit": 0,
-   "automasking_start_normal_falloff": 0,
-   "automasking_view_normal_limit": 0,
-   "automasking_view_normal_falloff": 0,
+   "automasking_start_normal_limit": 0.3490658402442932,
+   "automasking_start_normal_falloff": 0.25,
+   "automasking_view_normal_limit": 1.570796012878418,
+   "automasking_view_normal_falloff": 1.570796012878418,
    "automasking_cavity_curve": {
     "flag": 1,
     "cur": 0,
@@ -5834,7 +5834,7 @@
   "sculpt_paint_unified_alpha": 0.5,
   "unified_paint_settings": {
    "size": 225,
-   "unprojected_radius": 0.37541288137435913,
+   "unprojected_radius": 1.5540105104446411,
    "alpha": 0.5,
    "weight": 1,
    "rgb": [
@@ -5849,31 +5849,31 @@
    ],
    "flag": 937,
    "last_rake": [
-    764,
-    687
+    770,
+    463
    ],
    "last_rake_angle": 0,
    "last_stroke_valid": 1,
    "average_stroke_accum": [
-    176.13848876953125,
-    -81.47618865966797,
-    268.17767333984375
+    -61.70585632324219,
+    179.61915588378906,
+    52.48146438598633
    ],
-   "average_stroke_counter": 38,
+   "average_stroke_counter": 61,
    "brush_rotation": 0,
    "brush_rotation_sec": 0,
    "anchored_size": 0,
-   "overlap_factor": 0.20000000298023224,
+   "overlap_factor": 1,
    "draw_inverted": 0,
    "stroke_active": 0,
    "draw_anchored": 0,
    "do_linear_conversion": 0,
    "last_location": [
-    0,
-    0,
-    0
+    -1.0579414367675781,
+    3.0561070442199707,
+    0.7775197625160217
    ],
-   "last_hit": 0,
+   "last_hit": 1,
    "anchored_initial_mouse": [
     0,
     0
@@ -5885,15 +5885,15 @@
    "distort_correction_mode": 7,
    "hard_edge_mode": 0,
    "smooth_boundary_flag": 47,
-   "start_pixel_radius": 0,
-   "size_pressure_value": 0.5716258883476257,
+   "start_pixel_radius": 225,
+   "size_pressure_value": 0.4571758508682251,
    "tex_mouse": [
-    803.6415405273438,
-    582.9446411132812
+    842.15380859375,
+    290.85076904296875
    ],
    "mask_tex_mouse": [
-    803.6415405273438,
-    582.9446411132812
+    842.15380859375,
+    290.85076904296875
    ],
    "colorspace": null
   },
@@ -5971,7 +5971,7 @@
    "table": null,
    "segments": null,
    "flag": 1,
-   "changed_timestamp": 27,
+   "changed_timestamp": 28,
    "view_rect": {
     "xmin": 0,
     "xmax": 1,

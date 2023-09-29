@@ -193,7 +193,7 @@
   "windowstate": 1,
   "active": 1,
   "cursor": 3,
-  "lastcursor": 1,
+  "lastcursor": 9,
   "modalcursor": 3,
   "grabcursor": 0,
   "pie_event_type_lock": 0,
@@ -205,8 +205,8 @@
   "event_queue_check_drag_handled": 0,
   "event_queue_consecutive_gesture_type": 0,
   "event_queue_consecutive_gesture_xy": [
-   844,
-   350
+   852,
+   425
   ],
   "event_queue_consecutive_gesture_data": null,
   "eventstate": null,
@@ -243,7 +243,7 @@
  "winactive": "#ref#10",
  "windows": {},
  "init_flag": 3,
- "file_saved": 1,
+ "file_saved": 0,
  "op_undo_depth": 0,
  "outliner_sync_select_dirty": 0,
  "operators": {
